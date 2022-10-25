@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9436A465-71E7-4FED-BC52-960F412CDB4D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkFlowAdapter</RootNamespace>
+    <AssemblyName>WorkFlowAdapter</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Label="UserUnifySettings">
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>Bin\$(Configuration)_$(Platform)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugType>full</DebugType>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Label="DebugDefaultSettings" Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>false</Optimize>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <ConfigurationFlag>Debug</ConfigurationFlag>
+    <DefineConstants>TRACE;DEBUG;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Label="ReleaseDefaultSettings" Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <ConfigurationFlag>Release</ConfigurationFlag>
+    <DefineConstants>TRACE;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NextLabs.CSCInvoke, Version=2.0.0.0, Culture=neutral, PublicKeyToken=26560a09a369d1f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLBUILDROOT)\bin\$(Configuration)_dotnet\NextLabs.CSCInvoke.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowserForm.Designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBar.Designer.cs">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WebReferences\WSSCEService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebReferences\WSSWorkFlow\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="WebReferences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://lab01-sps07/_layouts/ceSPService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>WebReferences\WSSCEService\</RelPath>
+      <UpdateFromURL>http://lab01-sps07/_layouts/ceSPService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WorkFlowAdapter_WSSCEService_DocUpload</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lab01-sps07/_vti_bin/workflow.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>WebReferences\WSSWorkFlow\</RelPath>
+      <UpdateFromURL>http://lab01-sps07/_vti_bin/workflow.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WorkFlowAdapter_WSSWorkFlow_Workflow</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WebReferences\WSSWorkFlow\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="WebReferences\WSSWorkFlow\workflow.disco" />
+    <None Include="WebReferences\WSSWorkFlow\workflow.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebReferences\WSSCEService\ceSPService.disco" />
+    <None Include="WebReferences\WSSCEService\ceSPService.wsdl" />
+    <None Include="WebReferences\WSSCEService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BrowserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <!-- The version will update before compile in makefile -->
+    <!-- <PreBuildEvent>perl $(NLBUILDROOT)/build/updateVersionInfo_csproj.pl $(ProjectDir)/AssemblyInfo.cs $(ProjectDir)/Makefile.inc dev $(PlatformName)</PreBuildEvent> -->
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+      call "$(NLBUILDROOT)/prod/Common/Managed/SPECSharpPostEvent.bat" "EXE" "$(Configuration)" "$(ProjectDir)$(OutDir)" 1 0 0
+      if not exist "$(NLBUILDROOT)/xlib" mkdir "$(NLBUILDROOT)/xlib"
+      if not exist "$(NLBUILDROOT)/xlib/$(Configuration)_dotnet" mkdir "$(NLBUILDROOT)/xlib/$(Configuration)_dotnet"
+      xcopy /f /y $(ProjectDir)$(OutDir)*.dll "$(NLBUILDROOT)/xlib/$(Configuration)_dotnet"
+      xcopy /f /y $(ProjectDir)$(OutDir)*.pdb "$(NLBUILDROOT)/xlib/$(Configuration)_dotnet"
+      xcopy /f /y $(ProjectDir)$(OutDir)*.exe "$(NLBUILDROOT)/xlib/$(Configuration)_dotnet"
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

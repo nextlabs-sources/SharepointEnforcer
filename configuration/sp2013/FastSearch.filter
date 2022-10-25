@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+<SearchPage>OSSSearchResults.aspx<PageRegular>(div class="srch-Icon"{1}[\s\S]*?(/div){1}[\s\S]*?(div class="srch-Title2"{1}[\s\S]*?(div class="srch-Title3"{1}[\s\S]*?href={1}[\s\S]*?(p class="srch-Metadata1"{1}[\s\S]*?(/p){1}</PageRegular>
+</SearchPage>
+<SearchPage>OSSSearchResults.aspx<PageRegular>(div style={1}[\s\S]*?(div class="srch-Icon"{1}[\s\S]*?(/div){1}[\s\S]*?(div class="srch-Title2"{1}[\s\S]*?(div class="srch-Title3"{1}[\s\S]*?href={1}[\s\S]*?(/span){1}[\s\S]*?(/div){1}(/div){1}(/div){1}</PageRegular>
+</SearchPage>
+<SearchPage>results.aspx<PageRegular>(div style={1}[\s\S]*?(div class="srch-Icon"{1}[\s\S]*?(/div){1}[\s\S]*?(div class="srch-Title2"{1}[\s\S]*?(div class="srch-Title3"{1}[\s\S]*?href={1}[\s\S]*?(/span){1}[\s\S]*?(/div){1}(/div){1}(/div){1}</PageRegular>
+</SearchPage>
+<SearchPage>results.aspx<PageRegular>(span class="srch-Icon"){1}[\s\S]*?(span class="srch-Title"){1}[\s\S]*?(div class="srch-Description"){1}[\s\S]*?(p class="srch-Metadata"){1}[\s\S]*?(/span){1}[\s\S]*?(/p){1}</PageRegular>
+</SearchPage>
+<ResultFilter>(div class="srch-stats"{1}[\s\S]*?results{1}[\s\S]*?(/div){1}</ResultFilter>
+<EnforceMessage>(h3)Security Trimming Enabled user may not have access to all results(/h3)</EnforceMessage>
+<NoItemMessage>
+(h3)User does not have access to any search results.(/h3)
+(ul)
+(li)		Please search of a different search term(/li)
+(li)		Try your search in a different scope.  Different scopes can have different results.(/li)
+(li)		Contact your system administrator regarding your data entitlements.(/li)(/ul)
+</NoItemMessage>
+</Catalog>

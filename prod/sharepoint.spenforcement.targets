@@ -1,0 +1,7 @@
+
+TARGETS = \
+	prod/SharePoint/SPEnforcement/ceSPService \
+	prod/SharePoint/SPEnforcement/Nextlabs.SPSecurityTrimming \
+	prod/SharePoint/SPEnforcement/IrmSettingTool \
+	prod/SharePoint/SPEnforcement/NextLabs.PLE \
+	prod/SharePoint/SPEnforcement/EventHandlers

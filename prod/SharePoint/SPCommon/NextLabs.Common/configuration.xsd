@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.nextlabs.com/configurationSchema"
+	xmlns:tns="http://www.nextlabs.com/configurationSchema"
+	elementFormDefault="qualified">
+	
+	<element name="Configuration">
+		<complexType>
+			<sequence>
+				<element name="SPEConfiguration" type="tns:SPEConfigiguration" minOccurs="0" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="SPEConfigiguration">
+		<sequence>
+			<element name="PropertyBag" minOccurs="0" type="tns:SPEPropertyBag" maxOccurs="unbounded"/>
+			<element name="UserAttribute" type="tns:SPEUserAttribute"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="SPEClaims">
+	    <sequence>
+			<element name="Claim" type="tns:SPEClaim" maxOccurs="unbounded"
+				minOccurs="0">
+				<annotation>
+					<documentation>
+						@name: the claim name. Just for
+						people call/read it @claimtype: it
+						is the claimtype when setup the
+						claim. It is normally begin with
+						"http://" @attributename: the
+						attribute name which will be sent to
+						Policy Controller to do evaluation.
+						The value of the attribute will be
+						from the claim @prefix: the prefix
+						for the attribute name which will be
+						sent to the Policy Controller. The
+						attribute name will be prefix+[last
+						word of the claim type string] For
+						example, for prefix="ADFS_" and
+						claimtype="http://schemas.xmlsoap.org/claims/IPVLevel".
+						then the attribute name will be
+						"ADFS_IPVLevel". Note: if
+						"attributename" and "prefix" are
+						both set in a Claim, then the
+						"attributename" will be used.
+					</documentation>
+				</annotation>
+			</element>
+		</sequence>
+		<attribute name="disabled" type="boolean"></attribute>
+	</complexType>
+	
+	<complexType name="SPEClaim">
+		<attribute name="name" type="string" />
+		<attribute name="attributename" type="string" />
+		<attribute name="claimtype" type="string" />
+		<attribute name="prefix" type="string" />
+		<attribute name="disabled" type="boolean" />
+	</complexType>
+
+
+	<complexType name="SPEPropertyBag">
+		<sequence>
+			<element name="Property" type="tns:SPEProperty"
+				maxOccurs="unbounded" minOccurs="0">
+			</element>
+		</sequence>
+		<attribute name="disabled" type="boolean"></attribute>
+		<attribute name="level">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="SiteCollection"></enumeration>
+					<enumeration value="SubSite"></enumeration>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<complexType name="SPEProperty">
+		<attribute name="disabled" type="boolean"></attribute>
+		<attribute name="name" type="string" use="required"></attribute>
+		<attribute name="attributename" type="string"></attribute>
+	</complexType>
+
+	<complexType name="SPEUserProfileProperty">
+		<sequence>
+			<element name="Property" type="tns:SPEProperty" maxOccurs="unbounded" minOccurs="0"></element>
+		</sequence>
+		<attribute name="disabled" type="boolean"></attribute>
+    <attribute name="cachetimeout" type="int"></attribute>    
+	</complexType>
+
+	<complexType name="SPEUserAttribute">
+		<sequence>
+			<element name="Claims" type="tns:SPEClaims" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="UserProfile" type="tns:SPEUserProfileProperty" maxOccurs="1" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+</schema>

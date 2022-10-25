@@ -1,0 +1,171 @@
+// TagDocProtector.idl : IDL source for TagDocProtector
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TagDocProtector.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+uuid(598F03E8-948A-425e-B7B2-2D613CEDFFEF)
+]
+interface I_IrmCrypt: IUnknown
+{
+    HRESULT HrGetBlockSize(
+        /*[OUT]*/ DWORD *pdwBlockSize) ;
+
+    HRESULT HrEncrypt(
+        /*[IN]*/     ULONG  ulOffset,
+        /*[IN/OUT]*/ BYTE  *pbData,
+        /*[IN]*/     DWORD  cbData,
+        /*[OUT]*/    DWORD *pcbData) ;
+
+    HRESULT HrDecrypt( 
+        /*[IN]*/     ULONG  ulOffset, 
+        /*[IN/OUT]*/ BYTE  *pbData, 
+        /*[IN]*/     DWORD  cbData, 
+        /*[OUT]*/    DWORD *pcbData) ;
+
+    HRESULT HrEncode(
+        /*[IN]*/     WCHAR *wszAlgID,
+        /*[IN]*/     UINT   uDataLen,
+        /*[IN]*/     BYTE  *pbDecodedData,
+        /*[IN/OUT]*/ UINT  *puEncodedStringLen,
+        /*[OUT]*/    WCHAR *wszEncodedString) ;
+
+    HRESULT HrDecode(
+        /*[IN]*/     WCHAR *wszAlgID,
+        /*[IN]*/     WCHAR *wszEncodedString,
+        /*[IN/OUT]*/ UINT  *puDecodedDataLen,
+        /*[OUT]*/    BYTE  *pbDecodedData) ;
+};
+
+[
+uuid(175EF0A4-8EB8-49ac-9049-F40EC69EC0A7)
+]
+interface I_IrmPolicyInfoRMS: IUnknown
+{
+    HRESULT HrGetICrypt(
+        /*[OUT]*/ I_IrmCrypt **piic) ;
+
+    HRESULT HrGetSignedIL(
+        /*[OUT]*/ BSTR *pbstrIL) ;
+    HRESULT HrGetServerId(
+        /*[OUT]*/ BSTR *pbstrServerId) ;
+    HRESULT HrGetEULs(
+        /*[OUT]*/ BSTR *rgbstrEUL,
+        /*[OUT]*/ BSTR *rgbstrId,
+        /*[OUT]*/ UINT *pcbEULs) ;
+
+    HRESULT HrSetSignedIL(
+        /*[IN]*/  BSTR bstrIL) ;
+    HRESULT HrSetServerEUL(
+        /*[IN]*/  BSTR bstrEUL) ;
+
+    HRESULT HrGetRightsTemplate(
+        /*[OUT]*/ BSTR* pbstrRightsTemplate) ;
+
+    HRESULT HrGetListGuid(
+        /*[OUT]*/ BSTR* pbstrListGuid) ;
+};
+
+[
+uuid(2CDC48E9-DB49-47E6-8487-A2EA1FCE292F)
+]
+interface I_IrmPolicyInfo:  IUnknown
+{
+    HRESULT HrGetListGuid(
+        /*[OUT]*/  BSTR* pbstrListGuid) ;
+
+    HRESULT HrSetListGuid(
+        /*[IN]*/   BSTR bstrListGuid) ;
+	
+    HRESULT HrGetRightsMask(
+        /*[OUT]*/  DWORD* pdwRightsMask) ;
+
+    HRESULT HrGetRequestingUser(
+        /*[OUT]*/  BSTR* pbstrRequestingUser,
+        /*[OUT]*/  BOOL* pfRequestingUserIsSystem) ;
+
+    HRESULT HrGetURL(
+        /*[OUT]*/  BSTR* pbstrURL) ;
+
+    HRESULT HrGetPolicyTitle(
+        /*[OUT]*/  BSTR* pbstrPolicyTitle) ;
+	
+    HRESULT HrGetPolicyDescription(
+        /*[OUT]*/  BSTR* pbstrPolicyDescription) ;
+	
+    HRESULT HrGetOfflineDays(
+        /*[OUT]*/  DWORD* pdwOfflineDays) ;
+};
+
+[
+	uuid(fcfbc0ac-672b-452d-80e5-40652503d96e)
+]
+interface I_IrmProtector: IUnknown
+{
+    HRESULT HrInit(
+        /*[OUT]*/ BSTR  *pbstrProduct,
+        /*[OUT]*/ DWORD *pdwVersion,
+        /*[OUT]*/ BSTR  *pbstrExtentions,
+        /*[OUT]*/ BOOL  *pfUseRMS) ;
+
+    HRESULT HrIsProtected(
+        /*[IN]*/  ILockBytes *pilbInput,
+        /*[OUT]*/ DWORD *pdwResult) ;
+
+    HRESULT HrSetLangId(
+        /*[IN]*/  LANGID langid) ;
+
+    HRESULT HrProtectRMS(
+        /*[IN]*/  ILockBytes         *pilbInput,
+        /*[IN]*/  ILockBytes         *pilbOutput,
+        /*[IN]*/  I_IrmPolicyInfoRMS *piid,
+        /*[OUT]*/ DWORD              *pdwStatus) ;
+
+    HRESULT HrUnprotectRMS(
+        /*[IN]*/  ILockBytes         *pilbInput,
+        /*[IN]*/  ILockBytes         *pilbOutput,
+        /*[IN]*/  I_IrmPolicyInfoRMS *piid,
+        /*[OUT]*/ DWORD              *pdwStatus) ;
+
+    HRESULT HrProtect(
+        /*[IN]*/  ILockBytes      *pilbInput,
+        /*[IN]*/  ILockBytes      *pilbOutput,
+        /*[IN]*/  I_IrmPolicyInfo *piid,
+        /*[OUT]*/ DWORD           *pdwStatus) ;
+
+    HRESULT HrUnprotect (/*[IN]*/  ILockBytes      *pilbInput,
+        /*[IN]*/  ILockBytes      *pilbOutput,
+        /*[IN]*/  I_IrmPolicyInfo *piid,
+        /*[OUT]*/ DWORD           *pdwStatus) ; 
+};
+[
+	object,
+	uuid(9F6F6D2C-434C-49D1-ACD5-C8B1C70A38DD),
+	dual,
+	nonextensible,
+	helpstring("ITagProtector Interface"),
+	pointer_default(unique)
+]
+interface ITagProtector : IDispatch{
+};
+[
+	uuid(501F8C10-C16E-4B95-B5D8-EC559315DEB0),
+	version(1.0),
+	helpstring("TagDocProtector 1.0 Type Library")
+]
+library TagDocProtectorLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(6EC4BB1F-3F73-4799-BC98-A3DF9AE23A0B),
+		helpstring("TagProtector Class")
+	]
+	coclass TagProtector
+	{
+		[default] interface I_IrmProtector;
+	};
+};

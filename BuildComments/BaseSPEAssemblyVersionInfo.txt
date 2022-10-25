@@ -1,0 +1,4 @@
+Assembly:
+	CSCInvoke			2.0.0.0
+	Nextlabs.Deploy			1.0.0.0
+	Nextlabs.Entitlement.Wizard	1.0.0.0

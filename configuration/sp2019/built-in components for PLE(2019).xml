@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export-file>
+    <version>-1</version>
+    <export-entities name="Sample/Portal Policies/Setting Page Enforcement">
+        <type>POLICY</type>
+        <pql>ID 217 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+POLICY "Sample/Portal Policies/Setting Page Enforcement"&#xd;
+    DESCRIPTION "Deny access setting page"&#xd;
+    ATTRIBUTE DOCUMENT_POLICY&#xd;
+    ATTRIBUTE USAGE&#xd;
+    FOR (TRUE AND (GROUP="PORTAL/SharePoint Setting - General Settings" OR GROUP="PORTAL/SharePoint Setting - Permissions and Management" OR GROUP="PORTAL/SharePoint Setting - Communications" OR GROUP="PORTAL/SharePoint Setting - Columns" OR GROUP="PORTAL/SharePoint Setting - Views" OR GROUP="PORTAL/SharePoint Setting - User and Permissions" OR GROUP="PORTAL/SharePoint Setting - Web Designer Galleries" OR GROUP="PORTAL/SharePoint Setting - Site Administration" OR GROUP="PORTAL/SharePoint Setting - Site Collection Administration" OR GROUP="PORTAL/SharePoint Setting - Hold" OR GROUP="PORTAL/SharePoint Setting - Look and Feel" OR GROUP="PORTAL/SharePoint Setting - Site Actions" OR GROUP="PORTAL/SharePoint Setting - Log Obligation"))&#xd;
+    ON (TRUE AND (FALSE OR GROUP="ACTION/OPEN"))&#xd;
+    TO (TRUE AND TRUE)&#xd;
+    BY ((TRUE AND (FALSE OR TRUE)) AND (TRUE AND TRUE) AND (TRUE AND TRUE))&#xd;
+    DO deny&#xd;
+    BY DEFAULT DO allow&#xd;
+    ON deny DO log&#xd;
+</pql>
+    </export-entities>
+    <export-entities name="ACTION/OPEN">
+        <type>COMPONENT</type>
+        <pql>ID 1 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "ACTION/Access" = &#xd;
+DESCRIPTION "Opening, moving, renaming, or changing of file system attributes."&#xd;
+(OPEN OR RENAME OR CHANGE_ATTRIBUTES OR CHANGE_SECURITY OR MOVE)</pql>
+    </export-entities>
+	
+    <export-entities name="PORTAL/SharePoint Setting - General Settings">
+        <type>COMPONENT</type>
+        <pql>ID 218 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - General Settings" = (((resource.spe.url = "sharepoint://**/listgeneralsettings.aspx" OR resource.spe.url = "sharepoint://**/advsetng.aspx" OR resource.spe.url = "sharepoint://**/listenabletargetting.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+	<export-entities name="PORTAL/SharePoint Setting - Permissions and Management">
+        <type>COMPONENT</type>
+        <pql>ID 219 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Users and Permissions" = (((resource.spe.url = "sharepoint://**/savetmpl.aspx" OR resource.spe.url = "sharepoint://**/user.aspx" OR resource.spe.url = "sharepoint://**/managecheckedoutfiles.aspx" OR resource.spe.url = "sharepoint://**/wrksetng.aspx" OR resource.spe.url = "sharepoint://**/policycts.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+    <export-entities name="PORTAL/SharePoint Setting - Communications">
+        <type>COMPONENT</type>
+        <pql>ID 220 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Communications" = (((resource.spe.url = "sharepoint://**/listsyndication.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+	<export-entities name="PORTAL/SharePoint Setting - Columns">
+        <type>COMPONENT</type>
+        <pql>ID 221 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Columns" = (((resource.spe.url = "sharepoint://**/fldedit.aspx" OR resource.spe.url = "sharepoint://**/fldeditex.aspx" OR resource.spe.url = "sharepoint://**/fldnew.aspx" OR resource.spe.url = "sharepoint://**/addfieldfromtemplate.aspx" OR resource.spe.url = "sharepoint://**/indxcol.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+    <export-entities name="PORTAL/SharePoint Setting - Views">
+        <type>COMPONENT</type>
+        <pql>ID 222 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Views" = (((resource.spe.url = "sharepoint://**/viewedit.aspx" OR resource.spe.url = "sharepoint://**/viewtype.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+	<export-entities name="PORTAL/SharePoint Setting - User and Permissions">
+        <type>COMPONENT</type>
+        <pql>ID 223 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - User and Permissions" = (((resource.spe.url = "sharepoint://**/user.aspx" OR resource.spe.url = "sharepoint://**/people.aspx" OR resource.spe.url = "sharepoint://**/mngsiteadmin.aspx OR resource.spe.url = "sharepoint://**/appprincipals.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+    <export-entities name="PORTAL/SharePoint Setting - Web Designer Galleries">
+        <type>COMPONENT</type>
+        <pql>ID 224 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Web Designer Galleries" = (((resource.spe.url = "sharepoint://**/mngfield.aspx" OR resource.spe.url = "sharepoint://**/mngctype.aspx" OR resource.spe.url = "sharepoint://**/lt**/allitems.aspx" OR resource.spe.url = "sharepoint://**/wp**/allitems.aspx" OR resource.spe.url = "sharepoint://**/masterpage**/allitems.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+	<export-entities name="PORTAL/SharePoint Setting - Site Administration">
+        <type>COMPONENT</type>
+        <pql>ID 225 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Site Administration" = (((resource.spe.url = "sharepoint://**/regionalsetng.aspx" OR resource.spe.url = "sharepoint://**/mcontent.aspx" OR resource.spe.url = "sharepoint://**/sitesubs.aspx" OR resource.spe.url = "sharepoint://**/siterss.aspx" OR resource.spe.url = "sharepoint://**/mngsubwebs.aspx" OR resource.spe.url = "sharepoint://**/areacachesettings.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+    <export-entities name="PORTAL/SharePoint Setting - Site Collection Administration">
+        <type>COMPONENT</type>
+        <pql>ID 226 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Site Collection Administration" = (((resource.spe.url = "sharepoint://**/adminrecyclebin.aspx" OR resource.spe.url = "sharepoint://**/enhancedsearch.aspx" resource.spe.url = "sharepoint://**/managefeatures.aspx" OR resource.spe.url = "sharepoint://**/vsubwebs.aspx" OR resource.spe.url = "sharepoint://**/auditsettings.aspx" OR resource.spe.url = "sharepoint://**/reporting.aspx" OR resource.spe.url = "sharepoint://**/portal.aspx" OR resource.spe.url = "sharepoint://**/variationsettings.aspx" OR resource.spe.url = "sharepoint://**/variationlabels.aspx" OR resource.spe.url = "sharepoint://**/variationlogs.aspx" OR resource.spe.url = "sharepoint://**/helpsettings.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;	
+    <export-entities name="PORTAL/SharePoint Setting - Hold">
+        <type>COMPONENT</type>
+        <pql>ID 227 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Site Collection Administration" = (((resource.spe.url = "sharepoint://**/searchAndAddToHold.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>	
+&#xd;
+    <export-entities name="PORTAL/SharePoint Setting - Look and Feel">
+        <type>COMPONENT</type>
+        <pql>ID 228 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Look and Feel" = (((resource.spe.url = "sharepoint://**/changesitemasterpage.aspx" OR resource.spe.url = "sharepoint://**/prjsetng.aspx" OR resource.spe.url = "sharepoint://**/areanavigationsettings.aspx" OR resource.spe.url = "sharepoint://**/aretemplatesettings.aspx" OR resource.spe.url = "sharepoint://**/areawelcomepage.aspx" OR resource.spe.url = "sharepoint://**/navoptions.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+&#xd;
+    <export-entities name="PORTAL/SharePoint Setting - Site Actions">
+        <type>COMPONENT</type>
+        <pql>ID 229 STATUS DRAFT CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON TRUE&#xd;
+        BY user.did = resource.dso.owner&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.accessgroupid has 1&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Look and Feel" = (((resource.spe.url = "sharepoint://**/ManageFeatures.aspx" OR resource.spe.url = "sharepoint://**/usage.aspx" OR resource.spe.url = "sharepoint://**/usageDetails.aspx" OR resource.spe.url = "sharepoint://**/reghost.aspx" OR resource.spe.url = "sharepoint://**/deleteweb.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>	
+&#xd;
+    <export-entities name="PORTAL/SharePoint Setting - Log Obligation">
+        <type>COMPONENT</type>
+        <pql>ID 245 STATUS EMPTY CREATOR "0" &#xd;
+ACCESS_POLICY&#xd;
+ACCESS_CONTROL&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON OPEN&#xd;
+        BY user.did = 0&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON EDIT&#xd;
+        BY user.did = 0&#xd;
+        DO allow&#xd;
+    PBAC &#xd;
+        FOR TRUE&#xd;
+        ON DELETE&#xd;
+        BY user.did = 0&#xd;
+        DO allow&#xd;
+ALLOWED_ENTITIES &#xd;
+&#xd;
+COMPONENT "PORTAL/SharePoint Setting - Log Obligation" = (((resource.spe.url = "sharepoint://**/aclinv.aspx" OR resource.spe.url = "sharepoint://**/newgrp.aspx" OR resource.spe.url = "sharepoint://**/people.aspx" OR resource.spe.url = "sharepoint://**/editgrp.aspx" OR resource.spe.url = "sharepoint://**/permsetup.aspx" OR resource.spe.url = "sharepoint://**/mngsiteadmin.aspx" OR resource.spe.url = "sharepoint://**/editprms.aspx" OR resource.spe.url = "sharepoint://**/user.aspx" OR resource.spe.url = "sharepoint://**/addrole.aspx" OR resource.spe.url = "sharepoint://**/role.aspx") AND TRUE) AND (TRUE AND TRUE))</pql>
+    </export-entities>
+</export-file>

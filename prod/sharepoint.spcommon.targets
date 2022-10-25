@@ -1,0 +1,5 @@
+
+TARGETS = \
+	prod/SharePoint/SPCommon/Nextlabs.Common \
+	prod/SharePoint/SPCommon/Nextlabs.SPEConfigModule \
+	prod/SharePoint/SPCommon/SharepointConfigModifier

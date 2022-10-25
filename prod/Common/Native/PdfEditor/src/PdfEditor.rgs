@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'PdfEditor'
+		'PdfEditor.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

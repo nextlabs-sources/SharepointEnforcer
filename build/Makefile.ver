@@ -1,0 +1,21 @@
+##
+#
+# Produce version information
+#
+# Description:
+#   This file should be included in top-level Makefile
+# http://sharepoint/sites/support/release/Lists/Current%20Releases/AllItems.aspx
+#
+##
+
+VERSION_PRODUCT_SPE			= Entitlement Manager for Microsoft SharePoint
+
+VERSION_MAJOR_SPE			= 9
+VERSION_MINOR_SPE			= 0
+VERSION_MAINTENANCE_SPE		= 0
+
+VERSION_PRODUCT_WFPA		= Workflow Policy Assistant for Microsoft SharePoint
+
+VERSION_MAJOR_WFPA			= 9
+VERSION_MINOR_WFPA			= 0
+VERSION_MAINTENANCE_WFPA	= 0

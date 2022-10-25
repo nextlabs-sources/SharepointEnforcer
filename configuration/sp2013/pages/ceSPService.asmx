@@ -1,0 +1,1 @@
+<%@ WebService Language="c#" Class="ceSPService.DocUpload, ceSPService, Version=3.0.0.0, Culture=neutral, PublicKeyToken=46b3b99bacb92dfa" %>

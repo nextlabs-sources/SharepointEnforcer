@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<x-header-items>
+<Customer-headers>
+<Item name="x-header1-Itar">
+<new-name>Itar</new-name>
+</Item>  
+<Item name= "Security" />
+</Customer-headers>
+<IP-Special>
+<x-header-name>X-Forwarded-For</x-header-name>
+</IP-Special>
+</x-header-items >

@@ -1,0 +1,5 @@
+
+TARGETS = \
+	install/spe2007 \
+	install/spe2010 \
+	install/wfpa

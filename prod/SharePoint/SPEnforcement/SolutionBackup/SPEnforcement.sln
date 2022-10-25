@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ceSPService", "ceSPService\ceSPService.csproj", "{4C4349C6-8891-41CE-BACF-F55F4C276572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHandlers", "EventHandlers\EventHandlers.csproj", "{544C5397-0455-4144-A8F8-3B487C75C3B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F242683-ED5C-4DA3-97F1-D361DACFECEA} = {2F242683-ED5C-4DA3-97F1-D361DACFECEA}
+		{69CB0AF9-1B1F-4B4A-A05E-0A50CF55B12E} = {69CB0AF9-1B1F-4B4A-A05E-0A50CF55B12E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextLabs.PLE", "NextLabs.PLE\NextLabs.PLE.csproj", "{69CB0AF9-1B1F-4B4A-A05E-0A50CF55B12E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F242683-ED5C-4DA3-97F1-D361DACFECEA} = {2F242683-ED5C-4DA3-97F1-D361DACFECEA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IrmSettingTool", "IrmSettingTool\IrmSettingTool.csproj", "{D0F88E49-D010-46C3-A2FA-C99E9BE81227}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F242683-ED5C-4DA3-97F1-D361DACFECEA} = {2F242683-ED5C-4DA3-97F1-D361DACFECEA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nextlabs.SPSecurityTrimming", "Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming.csproj", "{2F242683-ED5C-4DA3-97F1-D361DACFECEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		SP2016Debug|Any CPU = SP2016Debug|Any CPU
+		SP2016Release|Any CPU = SP2016Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C4349C6-8891-41CE-BACF-F55F4C276572}.SP2016Debug|Any CPU.ActiveCfg = SP2016Debug|Any CPU
+		{4C4349C6-8891-41CE-BACF-F55F4C276572}.SP2016Debug|Any CPU.Build.0 = SP2016Debug|Any CPU
+		{4C4349C6-8891-41CE-BACF-F55F4C276572}.SP2016Release|Any CPU.ActiveCfg = SP2016Release|Any CPU
+		{4C4349C6-8891-41CE-BACF-F55F4C276572}.SP2016Release|Any CPU.Build.0 = SP2016Release|Any CPU
+		{544C5397-0455-4144-A8F8-3B487C75C3B6}.SP2016Debug|Any CPU.ActiveCfg = SP2016Debug|Any CPU
+		{544C5397-0455-4144-A8F8-3B487C75C3B6}.SP2016Debug|Any CPU.Build.0 = SP2016Debug|Any CPU
+		{544C5397-0455-4144-A8F8-3B487C75C3B6}.SP2016Release|Any CPU.ActiveCfg = SP2016Release|Any CPU
+		{544C5397-0455-4144-A8F8-3B487C75C3B6}.SP2016Release|Any CPU.Build.0 = SP2016Release|Any CPU
+		{69CB0AF9-1B1F-4B4A-A05E-0A50CF55B12E}.SP2016Debug|Any CPU.ActiveCfg = SP2016Debug|Any CPU
+		{69CB0AF9-1B1F-4B4A-A05E-0A50CF55B12E}.SP2016Debug|Any CPU.Build.0 = SP2016Debug|Any CPU
+		{69CB0AF9-1B1F-4B4A-A05E-0A50CF55B12E}.SP2016Release|Any CPU.ActiveCfg = SP2016Release|Any CPU
+		{69CB0AF9-1B1F-4B4A-A05E-0A50CF55B12E}.SP2016Release|Any CPU.Build.0 = SP2016Release|Any CPU
+		{D0F88E49-D010-46C3-A2FA-C99E9BE81227}.SP2016Debug|Any CPU.ActiveCfg = SP2016Debug|Any CPU
+		{D0F88E49-D010-46C3-A2FA-C99E9BE81227}.SP2016Debug|Any CPU.Build.0 = SP2016Debug|Any CPU
+		{D0F88E49-D010-46C3-A2FA-C99E9BE81227}.SP2016Release|Any CPU.ActiveCfg = SP2016Release|Any CPU
+		{D0F88E49-D010-46C3-A2FA-C99E9BE81227}.SP2016Release|Any CPU.Build.0 = SP2016Release|Any CPU
+		{2F242683-ED5C-4DA3-97F1-D361DACFECEA}.SP2016Debug|Any CPU.ActiveCfg = SP2016Debug|Any CPU
+		{2F242683-ED5C-4DA3-97F1-D361DACFECEA}.SP2016Debug|Any CPU.Build.0 = SP2016Debug|Any CPU
+		{2F242683-ED5C-4DA3-97F1-D361DACFECEA}.SP2016Release|Any CPU.ActiveCfg = SP2016Release|Any CPU
+		{2F242683-ED5C-4DA3-97F1-D361DACFECEA}.SP2016Release|Any CPU.Build.0 = SP2016Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

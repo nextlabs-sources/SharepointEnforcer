@@ -1,0 +1,23 @@
+Patch the fllowing files:
+
+Directory of C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\SiteTemplates\Blog\Xml\onet.xml
+
+Directory of C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\SiteTemplates\CENTRALADMIN\XML\onet.xml
+
+Directory of C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\SiteTemplates\MPS\XML\onet.xml
+
+Directory of C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\SiteTemplates\sts\xml\onet.xml
+
+Directory of C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\SiteTemplates\Wiki\Xml\onet.xml
+
+Between the :    <WebFeatures></WebFeatures>
+
+Add this segment :
+
+   <!-- NextLabs SharePoint Enforcer -->
+   <Feature ID="36a298d8-413b-4dee-83cd-6082924e3df8" />
+   <Feature ID="1AE19FFB-20F1-43b8-B935-D669F72EC147" />
+   <!-- NextLabs SharePoint Enforcer -->
+
+ 
+

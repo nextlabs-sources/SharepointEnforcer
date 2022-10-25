@@ -1,0 +1,1365 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <Receivers ListTemplateId="100">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="101">   
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="102">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="103">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="104">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="105">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="106">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="107">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="108">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="109">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="110">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="111">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="112">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="113">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="114">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="115">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="116">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="117">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="118">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="119">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="120">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="130">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="140">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="150">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="200">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="201">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="202">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="204">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="207">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="210">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="211">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="212">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="300">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="301">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="302">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="303">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="402">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="403">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="404">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="405">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="432">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="433">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="450">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+  <Receivers ListTemplateId="470">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="480">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="499">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="506">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="850">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="851">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="1100">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="1200">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="1300">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="1301">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="1302">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="2002">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="2003">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="2100">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="10102">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="600">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+
+  <Receivers ListTemplateId="171">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+  <Receivers ListTemplateId="701">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+  
+    <Receivers ListTemplateId="170">
+    <Receiver>
+      <Name>FieldAddingEventHandler</Name>
+      <Type>FieldAdding</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+
+    <Receiver>
+      <Name>FieldUpdatingEventHandler</Name>
+      <Type>FieldUpdating</Type>
+      <SequenceNumber>20000</SequenceNumber>
+      <Assembly>NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+      <Class>NextLabs.SPEnforcer.ListHandler</Class>
+      <Data></Data>
+      <Filter></Filter>
+    </Receiver>
+  </Receivers>
+  
+</Elements>

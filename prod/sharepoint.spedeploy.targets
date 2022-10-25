@@ -1,0 +1,5 @@
+
+TARGETS = \
+	prod/SharePoint/SPEDeploy/Nextlabs.Entitlement.Wizard \
+	prod/SharePoint/SPEDeploy/Nextlabs.SPE.Console.SPEAdmin \
+	prod/SharePoint/SPEDeploy/NextLabs.Deployment

@@ -1,0 +1,245 @@
+#include "Setup.h"  
+#include "ifx.h" 
+#include "include/servicecontrol.h" 
+#include "include/logging.h"
+#include "include/common.h" 
+
+#define  COMMON_DLL  "NextLabs.Common.dll"  
+#define  CSCINVOKE_DLL "NextLabs.CSCInvoke.dll" 
+#define  DEPLOYMENT_DLL "NextLabs.Deployment.dll"
+#define  DIAGNOSTIC_DLL "NextLabs.Diagnostic.dll"
+#define  PLE_DLL "NextLabs.PLE.dll"
+#define  SPECONGIGMODULE_DLL "NextLabs.SPEConfigModule.dll"
+#define  SPENFORCER_DLL "NextLabs.SPEnforcer.dll"
+#define  SPESECURITYTRIMING_DLL "Nextlabs.SPSecurityTrimming.dll"
+ 
+#define FILE_COMMON_DLL "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\NextLabs.Common\\v4.0_3.0.0.0__e03e4c7ee29d89ce\\NextLabs.Common.dll"
+#define FILE_DEPLOYMENT_DLL "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\NextLabs.Deployment\\v4.0_1.0.0.0__e03e4c7ee29d89ce\\NextLabs.Deployment.dll"
+#define FILE_DIAGNOSTIC_DLL  "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\NextLabs.Diagnostic\\v4.0_3.0.0.0__b0c42a051caacdec\\NextLabs.Diagnostic.dll"
+#define FILE_PLE_DLL "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\NextLabs.PLE\\v4.0_3.0.0.0__72dcea101a86dcde\\NextLabs.PLE.dll"
+#define FILE_SPECONGIGMODULE_DLL "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\Nextlabs.SPEConfigModule\\v4.0_3.0.0.0__66eac961f5a2b15e\\NextLabs.SPEConfigModule.dll"  
+#define FILE_SPENFORCER_DLL "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\NextLabs.SPEnforcer\\v4.0_3.0.0.0__5ef8e9c15bdfa43e\\NextLabs.SPEnforcer.dll"
+#define FILE_SPESECURITYTRIMING_DLL "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\Nextlabs.SPSecurityTrimming\\v4.0_3.0.0.0__7030e9011c5eb860\\Nextlabs.SPSecurityTrimming.dll"  
+#define FILE_SPENFORCER_PATH "C:\\Windows\\Microsoft.NET\\assembly\\GAC_MSIL\\NextLabs.SPEnforcer\\v4.0_3.0.0.0__5ef8e9c15bdfa43e\\"
+ 
+#define SHAREPOINT2016 "C:\\Program Files\\Common Files\\microsoft shared\\Web Server Extensions\\16\\BIN\\"  
+#define FILE_SPEC "psconfigui.exe"
+ 
+#define BAKDIR "C:\\Program Files\\NextLabs\\"
+     
+ #define INSTALLED_VERSION_PATH "C:\\Program Files\\NextLabs\\SharePoint Enforcer\\bin\\"   
+ #define INSTALLED_VERSION_FILE "CE_Log_Interface.dll"    
+ 
+ 
+function BOOL IISReset(hMSI)
+	STRING szApp, szSysFolder;
+	NUMBER nSize;
+ begin
+	MsiGetTargetPath(hMSI, "SystemFolder", szSysFolder, nSize); 
+	szApp = szSysFolder + "iisreset.exe"; 
+	if (LaunchAppAndWait(szApp, "", LAAW_OPTION_NOWAIT | LAAW_OPTION_HIDDEN) < 0) then
+		WriteToLogFile(hMSI, "IISReset Failed.");
+		return FALSE;
+	endif;	 
+	return TRUE; 
+ end; 
+ 
+ function BlankLeadingZeros(szString) 
+  INT iVal, iLength; 
+begin 
+  iVal = 0; 
+  iLength = StrLength (szString);    
+  while(iVal <= iLength) 
+       if(szString[iVal] = ":")  then
+           szString[iVal] = "-"; 
+       endif;
+       if(szString[iVal] = "-")  then       
+           szString[iVal] = "-"; 
+       endif;
+
+    iVal++; 
+  endwhile; 
+end;  
+  
+ function CheckFirstOrUpgrade(hMSI)
+ STRING svResult,szExistingVersion,szUpdateVersion,ProductVersion;
+ NUMBER nResult,nResult2,nSize,nResult3;
+ begin
+   // if(FindFile (FILE_SPENFORCER_PATH, SPENFORCER_DLL, svResult) = 0) then
+   MsiGetProperty(hMSI,"ProductVersion",szUpdateVersion,nSize);
+   VerGetFileVersion("C:\\Program Files\\NextLabs\\SharePoint Enforcer\\bin\\CE_Log_Interface.dll",szExistingVersion); 
+   nResult =  VerCompare(szUpdateVersion, szExistingVersion, VERSION);
+   nResult2 = FindFile(INSTALLED_VERSION_PATH, INSTALLED_VERSION_FILE, svResult);
+   nResult3 =  VerCompare("7.4.1.0", szExistingVersion, VERSION);
+    if((nResult2 = 0)&&(nResult = 0)) then  
+        MsiSetProperty(hMSI,"IsUpgrade","1");
+    elseif((nResult2 = 0)&&(nResult = 1)) then 
+         MsiSetProperty(hMSI,"IsUpgrade","2");
+         MessageBox ("Please uninstall existing version first.", SEVERE);
+         return ERROR_INSTALL_FAILURE;
+    else
+        MsiSetProperty(hMSI,"IsUpgrade","0");   
+    endif; 
+    
+    if(nResult3 = 0) then
+         MsiSetProperty(hMSI,"UpgradeFromOldVersion","1");
+    endif;
+ end;
+ 
+ function BakFiles(hMSI)
+    STRING     szKey,szKey2,svResult,bakDir,svName,dirBak,dirBak2,szSrcFile,szExistingVersion;
+    NUMBER findSP, nSize;
+ begin
+ findSP = 0;
+  VerGetFileVersion("C:\\Program Files\\NextLabs\\SharePoint Enforcer\\bin\\CE_Log_Interface.dll",szExistingVersion);      
+  MsiGetProperty(hMSI,"bakDir",svName,nSize);
+   GetSystemInfo(DATE,nSize,szKey2);
+   GetSystemInfo(TIME,nSize,szKey);
+    BlankLeadingZeros(szKey);    
+    BlankLeadingZeros(szKey2); 
+  dirBak =  BAKDIR +svName+szExistingVersion+"-" +szKey2+"-"+szKey+"\\BAK_GAC\\";
+  dirBak2 =   BAKDIR +svName+szExistingVersion+"-" +szKey2+"-"+szKey+"\\";     
+           
+   if (FindFile (SHAREPOINT2016, FILE_SPEC, svResult) = 0) then
+                findSP = 1;
+     szSrcFile = "*.*";
+     XCopyFile("C:\\Program Files\\NextLabs\\SharePoint Enforcer\\"^szSrcFile,dirBak2^ "BAK_Program Files" ^ "*.*", INCLUDE_SUBDIR) ;       
+       if(CopyFile(FILE_COMMON_DLL,dirBak+COMMON_DLL)!=0) then
+             MessageBox ("could not copy NextLabs.Common.dll", SEVERE);
+             return ERROR_INSTALL_FAILURE;
+     endif;
+     if(CopyFile (FILE_DEPLOYMENT_DLL,dirBak+DEPLOYMENT_DLL)!=0) then
+             MessageBox ("could not copy NextLabs.Deployment.dll", SEVERE);
+             return ERROR_INSTALL_FAILURE;
+     endif;
+      if(CopyFile (FILE_DIAGNOSTIC_DLL, dirBak+DIAGNOSTIC_DLL)!=0) then
+             MessageBox ("could not copy NextLabs.Diagnostic.dll", SEVERE);
+             return ERROR_INSTALL_FAILURE;
+     endif;
+      if(CopyFile (FILE_PLE_DLL, dirBak+PLE_DLL)!=0) then
+             MessageBox ("could not copy NextLabs.PLE.dll", SEVERE);
+             return ERROR_INSTALL_FAILURE;
+      endif;
+       if(CopyFile (FILE_SPECONGIGMODULE_DLL, dirBak+SPECONGIGMODULE_DLL)!=0) then
+             MessageBox ("could not copy NextLabs.SPEConfigModule.dll", SEVERE);
+             return ERROR_INSTALL_FAILURE;
+      endif;
+         if(CopyFile (FILE_SPENFORCER_DLL, dirBak+SPENFORCER_DLL)!=0) then
+             MessageBox ("could not copy NextLabs.SPEnforcer.dll", SEVERE);
+             return ERROR_INSTALL_FAILURE;
+      endif;
+          if(CopyFile (FILE_SPESECURITYTRIMING_DLL, dirBak+SPESECURITYTRIMING_DLL)!=0) then
+             MessageBox ("could not copy Nextlabs.SPSecurityTrimming.dll", SEVERE);
+             return ERROR_INSTALL_FAILURE;
+      endif;                  
+   endif;
+   if(findSP = 0) then
+       MessageBox ("There is no SharePoint to be installed.", SEVERE);
+       return ERROR_INSTALL_FAILURE;  
+   endif;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  ValidateUninstallPassword
+//                                                                           
+//  Purpose:  Attempts to shutdown the agent service and displays a UI if necessary.
+//			  This function is used only in the UI sequence.
+//
+//  Returns: 0 if sucessful
+//           1 if password is incorrect
+//           2 if some other fatal error occured
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+function INT ValidateAdministrationPassword(hMSI)
+	INT result; 
+    STRING resultAsString; 
+begin  
+	WriteToLogFile(hMSI, "Begin ValidateAdministrationPassword()");
+ 	//result = StopService(hMSI);             
+ 	result = ERROR_SUCCESS;  
+ 	
+ 	switch (result)
+		case ERROR_INCORRECT_PASSWORD:			
+ 			DenyNextDialog(hMSI);
+			ShowModalDialog(hMSI, "Invalid Password", "The password you have entered is invalid. Please check your password and try again.", SEVERE);
+	 	case ERROR_AGENT_NOT_STOPPED:                            
+	 		DenyNextDialog(hMSI);
+	 		ShowModalDialog(hMSI, "Error", "An unexpected error occured. The Policy Controller service could not be stopped.", SEVERE);	 
+		case ERROR_SUCCESS:      
+			AllowNextDialog(hMSI);                      
+	 	default:
+	 		DenyNextDialog(hMSI);
+	 		ShowModalDialog(hMSI, "Error", "An unexpected error occured. The Policy Controller service could not be stopped.", SEVERE);	                                            				
+	 endswitch;
+	 
+	 return ERROR_SUCCESS;
+end;
+
+function INT BackupFiles(hMSI)
+	INT result;
+	string fileToBackup;
+	string backupFile;
+	string path; 
+	string resultStr;                                      
+begin
+   path = "C:\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\16\\TEMPLATE\\LAYOUTS";
+   fileToBackup = path ^ "viewlsts.aspx";
+   backupFile = path ^ "viewlsts_bak.aspx";  
+
+   if (FindFile(path, "viewlsts_bak.aspx", resultStr) < 0) then
+       result = RenameFile(fileToBackup, backupFile);
+       if (result < 0) then 
+           NumToStr(resultStr,result);
+	       WriteToLogFile(hMSI, "Failed to backup file, " + fileToBackup + " to " + backupFile + ".  Error: " + resultStr);
+       endif;
+    endif;
+
+	 return ERROR_SUCCESS;   
+end;
+
+function INT RestoreFiles(hMSI)
+	INT result;
+	string backupFile;
+	string fileToRestore;
+	string path; 
+	string resultStr;                                      
+begin
+   path = "C:\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\16\\TEMPLATE\\LAYOUTS";
+   backupFile = path ^ "viewlsts_bak.aspx";  
+   fileToRestore = path ^ "viewlsts.aspx";
+   if (FindFile(path, "viewlsts_bak.aspx", resultStr) < 0) then
+       NumToStr(resultStr,result);
+	   WriteToLogFile(hMSI, "Failed to find backup file, " + backupFile + ".  Restore will not take place.  Error: " + resultStr);   
+	   return ERROR_SUCCESS;
+   endif;
+
+   result = DeleteFile(fileToRestore);
+   if (result < 0) then
+	  NumToStr(resultStr,result);
+	  WriteToLogFile(hMSI, "Failed to delete existing file to restor.  Restore may not work.  Error: " + resultStr);
+   endif;
+   
+   result = RenameFile(backupFile, fileToRestore);
+   if (result < 0) then 
+       NumToStr(resultStr,result);
+	   WriteToLogFile(hMSI, "Failed to restore file, " + fileToRestore + ".  Error: " + resultStr);
+   endif;
+
+   return ERROR_SUCCESS;
+end;
+
+function INT CheckUninstall(hMSI)
+	INT result;
+	string canUninstallFile;
+	string path; 
+	string resultStr;                                      
+begin
+   path = "C:\\Program Files\\Common Files\\Microsoft Shared\\Web Server Extensions\\16\\TEMPLATE\\FEATURES\\NextLabs.Entitlement.Basic";
+   if (FindFile(path, "Feature.xml", resultStr) = 0) then
+       NumToStr(resultStr,result);
+	   MessageBox ("Can not uninstall, Nextlabs Entitlement solution is still in use, please undeploy it first.", SEVERE); 
+	   return ERROR_FILE_NOT_FOUND;
+   endif;
+   return ERROR_SUCCESS;
+end; 

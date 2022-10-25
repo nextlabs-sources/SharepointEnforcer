@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebServiceConfig xmlns="http://www.nextlabs.com/configurationSchema">
+	<WebService  name ="imaging.asmx">
+		<WebServiceNameSpace name ="ois" value="http://schemas.microsoft.com/sharepoint/soap/ois/"/>
+		<Method policyaction= "Read"	patternxpath="//ois:Download"	urlkey="url1=//ois:strListName url2=//ois:itemFileNames"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForImageLib" />
+	</WebService>
+	<WebService  name = "cellstorage.svc">
+		<WebServiceNameSpace name ="nf" value="http://schemas.microsoft.com/sharepoint/soap/"/>
+		<Method policyaction="Read"	patternxpath="//nf:SubRequestData[@CoauthRequestType='JoinCoauthoring']"	urlkey="url1=//nf:Request/@Url"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+		<Method policyaction="Read"	patternxpath="//nf:SubRequestData[@ExclusiveLockRequestType='GetLock']"	urlkey="url1=//nf:Request/@Url"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+		<Method policyaction="Read"	patternxpath="//nf:SubRequestData[@ExclusiveLockRequestType='GetLock']"	urlkey="url1=//nf:Request/@Url"	resourcetype="item"	class="WebServiceExt.SPEDirectUrl"	type = "c:\WebServiceExt.dll" disabled="true" />
+		<Method policyaction="Read" patternxpath="//nf:SubRequestData[@GetFileProps='true']"	urlkey="url1=//nf:Request/@Url"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+	</WebService>
+	<WebService  name = "lists.asmx">
+		<WebServiceNameSpace name ="nf1" value="http://schemas.microsoft.com/sharepoint/soap/"/>
+		<Method policyaction="Read"	patternxpath="//nf1:GetList"	urlkey="url1=//nf1:listName"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+		<Method policyaction="Write"	patternxpath="//nf1:GetListContentTypes"	urlkey="url1=//nf1:listName"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+		<Method policyaction="Write"	patternxpath="//nf1:Method[@Cmd='New']"	urlkey="url1=//nf1:listName url2=//nf1:Batch/@ViewName"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+		<Method policyaction="Read"	patternxpath="//nf1:GetAttachmentCollection"	urlkey="url1=//nf1:listName url2=//nf1:listItemID"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForItemGuidUrl" />
+		<Method policyaction="Export"	patternxpath="//nf1:GetListAndView"	urlkey="url1=//nf1:listName url2=//nf1:viewName"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid"/>
+		<Method policyaction="Write"	patternxpath="//nf1:AddList"	urlkey="##"	resourcetype="site"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromWebObj" />
+		<Method policyaction="Write"	patternxpath="//nf1:CheckOutFile"	urlkey="url1=//nf1:pageUrl"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+		<Method policyaction="Write"	patternxpath="//nf1:UndoCheckOut"	urlkey="url1=//nf1:pageUrl"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute"  />
+		<Method policyaction="Read"	patternxpath="//nf1:GetListItems"	urlkey="url1=//nf1:listName"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid"  />
+		<Method policyaction="Read"	patternxpath="//nf1:GetListItemChangesSinceToken"	urlkey="url1=//nf1:listName"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid"  />
+		<Method policyaction="Write"	patternxpath="//nf1:ApplyContentTypeToList"	urlkey="url1=//nf1:listName"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+	</WebService>
+	<WebService  name ="client.svc">
+		<WebServiceNameSpace name ="ois" value="http://schemas.microsoft.com/sharepoint/clientquery/2009"/>
+		<Method policyaction= "Delete"	conditionxpath="//ois:Identity[contains(@Name,':list:')]"	patternxpath="//ois:Method[@Name='Recycle']"	urlkey="url1=//ois:Identity/@Name"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+		<Method policyaction= "Delete"	patternxpath="//ois:Method[@Name='Recycle']"	urlkey="url1=//ois:Method/@ObjectPathId url2=//ois:Parameter[@Type='String'] url3=//ois:Parameter[@Type='Number']"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFrom3UrlComponents" />
+		<Method policyaction= "Write"	conditionxpath="//ois:SetProperty[@Name='CommandUIExtension']"	patternxpath="//ois:Method[@Name='Add']"	urlkey="url1=//ois:Identity/@Name"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+		<Method policyaction= "Write"	conditionxpath="//ois:Property[@Name='UserCustomActions']"	patternxpath="//ois:Method[@Name='Add']"	urlkey="url1=//ois:Identity/@Name"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+		<Method policyaction= "Write"	patternxpath="//ois:Method[@Name='Add']"	urlkey="url1=//ois:Identity/@Name"	resourcetype="site"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+		<Method policyaction="Write"	conditionxpath="//ois:Method[@Name='GetItemByStringId']//ois:Parameter"	patternxpath="//ois:Method[@Name='UndoCheckOut']"	urlkey="url1=//ois:Method[@Name='GetById']//ois:Parameter[@Type='String'] url2=//ois:Method[@Name='GetItemByStringId']//ois:Parameter"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForItemGuidUrl"  />
+		<Method policyaction="Write"	conditionxpath="//ois:Method[@Name='GetItemById']//ois:Parameter"	patternxpath="//ois:Method[@Name='UndoCheckOut']"	urlkey="url1=//ois:Method[@Name='GetById']//ois:Parameter[@Type='String'] url2=//ois:Method[@Name='GetItemById']//ois:Parameter"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForItemGuidUrl"  />
+		<Method policyaction="Write"	conditionxpath="//ois:Method[@Name='GetItemById']//ois:Parameter"	patternxpath="//ois:Method[@Name='CheckOut']"	urlkey="url1=//ois:Method[@Name='GetById']//ois:Parameter[@Type='String'] url2=//ois:Method[@Name='GetItemById']//ois:Parameter"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForItemGuidUrl"  />
+		<Method policyaction="Write"	conditionxpath="//ois:Method[@Name='GetItemByStringId']//ois:Parameter"	patternxpath="//ois:Method[@Name='CheckOut']"	urlkey="url1=//ois:Method[@Name='GetById']//ois:Parameter[@Type='String'] url2=//ois:Method[@Name='GetItemByStringId']//ois:Parameter"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForItemGuidUrl"  />
+		<Method policyaction= "Delete"	patternxpath="//ois:Method[@Name='GetItems']"	urlkey="url1=//ois:Identity/@Name"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+		<Method policyaction= "Write"	conditionxpath="//ois:SetProperty[@Name='WelcomePage']"	patternxpath="//ois:Method[@Name='Update']"	urlkey="##"	resourcetype="site"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromWebObj"	disabled="false" />
+		<Method policyaction= "Write"	patternxpath="//ois:Method[@Name='Update']"	urlkey="url1=//ois:Identity/@Name"	resourcetype="##"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity"	disabled="false" />
+		<Method policyaction= "Read"	patternxpath="//ois:Identity[contains(@Name,':file:')]"	urlkey="url1=//ois:Identity/@Name"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+		<Method policyaction= "Read"	patternxpath="//ois:Method[@Name='GetFileByServerRelativeUrl']"	urlkey="url1=//ois:Parameter[@Type='String']"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromSiteRelativePath"  />
+		<Method policyaction= "Edit"	patternxpath="//ois:StaticMethod[@Name='SetRating']"	urlkey="url1=//ois:StaticMethod/ois:Parameters/ois:Parameter[1] url2=//ois:StaticMethod/ois:Parameters/ois:Parameter[2]"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForItemGuidUrl" />
+		<Method policyaction= "Read"    patternxpath="//ois:Identity[contains(@Name,':folder:')]" urlkey="url1=//ois:Identity/@Name" 	resourcetype="list" class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+		<Method policyaction= "Write" 	patternxpath="//ois:SetProperty[@Name='Title']" 	urlkey="url1=//ois:Identity/@Name" 	resourcetype="##" 	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForClientSvcFromIdentity" />
+	</WebService>
+	<WebService  name ="SocialDataService.asmx">
+		<WebServiceNameSpace name="ois" value="http://microsoft.com/webservices/SharePointPortalServer/SocialDataService"/>
+		<Method policyaction="Write"	patternxpath="//ois:SetRating"	urlkey="url1=//ois:url"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+		<Method policyaction="Read"	patternxpath="//ois:GetRatingOnUrl"	urlkey="url1=//ois:url"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute"  />
+	</WebService>
+	<WebService  name ="Copy.asmx">
+		<WebServiceNameSpace name ="ois" value="http://schemas.microsoft.com/sharepoint/soap/"/>
+		<Method policyaction="Read"	patternxpath="//ois:GetItem"	urlkey="url1=//ois:GetItem/Url"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+		<Method policyaction="Read"	patternxpath="//ois:CopyIntoItemsLocal"	urlkey="url1=//ois:CopyIntoItemsLocal/ois:SourceUrl"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+		<Method policyaction="Read"	patternxpath="//ois:CopyIntoItems"	urlkey="url1=//ois:CopyIntoItems/SourceUrl"	resourcetype="item"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromAttribute" />
+	</WebService>
+	<WebService  name ="Views.asmx">
+		<WebServiceNameSpace name ="ois" value="http://schemas.microsoft.com/sharepoint/soap/"/>
+		<Method policyaction="Write"	patternxpath="//ois:UpdateView"	urlkey="url1=//ois:UpdateView/ois:listName"	resourcetype="list"	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+		<Method  policyaction="Delete" patternxpath="//ois:DeleteView" urlkey="url1=//ois:DeleteView/ois:listName" resourcetype="list" class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+		<Method  policyaction="Read" patternxpath="//ois:GetView" urlkey="url1=//ois:GetView/ois:listName" resourcetype="list" class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+		<Method  policyaction="Read" patternxpath="//ois:GetViewHtml" urlkey="url1=//ois:GetViewHtml/ois:listName" resourcetype="list" class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" /> 
+		<Method  policyaction="Write" patternxpath="//ois:UpdateViewHtml" urlkey="url1=//ois:UpdateViewHtml/ois:listName" resourcetype="list" class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" /> 
+		<Method  policyaction="Write" patternxpath="//ois:UpdateViewHtml2" urlkey="url1=//ois:UpdateViewHtml2/ois:listName" resourcetype="list" class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" /> 
+	</WebService>
+	
+	<WebService  name ="sitedata.asmx">
+
+		<WebServiceNameSpace name ="ois" value="http://schemas.microsoft.com/sharepoint/soap/"/>
+
+		<Method  policyaction="Write" patternxpath="//ois:GetContent" urlkey="url1=//ois:GetContent/@objectType url2=//ois:GetContent/@objectId" resourcetype="list" class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildForListGuid" />
+
+	</WebService>   
+	<WebService  name ="webs.asmx">
+		<WebServiceNameSpace name ="ois" value="http://schemas.microsoft.com/sharepoint/soap/"/>
+		<Method policyaction="Read" 	patternxpath="//ois:WebUrlFromPageUrl" 	urlkey="url1=//ois:WebUrlFromPageUrl/ois:pageUrl" 	resourcetype="site" 	class="NextLabs.SPE.WebSvcEntitlement.SPEWebSvcResBuildFromUrl" />
+	</WebService>
+</WebServiceConfig>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+      <CustomAction 
+        Id="SPESiteMenus.SiteSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="106"
+	      RequireSiteAdministrator="TRUE" 
+        Title="NextLabs Entitlement Manager settings">
+        <UrlAction Url="~Site/_layouts/NxlEMScSetting.aspx"/>
+      </CustomAction>
+      <CustomAction
+       Id="SPESiteMenus.ClassificationComparison "
+       GroupId="SiteAdministration"
+       Location="Microsoft.SharePoint.SiteSettings"
+       Sequence="30"
+       Rights = "Text"
+       Title="NextLabs Classification Comparison">
+        <UrlAction Url="~Site/_layouts/NxlClassificationComparison.aspx"/>
+      </CustomAction>
+    </Elements>
+

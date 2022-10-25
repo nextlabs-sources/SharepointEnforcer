@@ -1,0 +1,58 @@
+Local build steps
+
+1. Set global environment: NLEXTERNALDIR, NLEXTERNALDIR2, NLEXTERNALGITDIR
+	example:
+	NLEXTERNALDIR= D:/Projects/Perforce/the_Pomona/external
+	NLEXTERNALDIR2=D:/Projects/Perforce/the_Pomona/source_main_external
+	NLEXTERNALGITDIR=D:/Projects/Perforce/the_Pomona/git_external
+
+2. run SetDevEnvironmentVaribate.bat as administrator
+3. Open cygwin and "cd $WORKSPACE"
+4. excute "source ./setenv"
+5. Copy follow code to export base variables
+
+	export CONFIG_TYPE=release
+	export BUILD_NUMBER=15
+	export VERSION_BUILD=15
+	export VERSION_BUILD_SHORT=15
+	export BUILDTYPE=release
+	export BUILD_DATE=20200629
+	export BUILD_DATE_LONG=202006290032
+	export PREFAST=0
+	export OFFICIALCERT=1
+
+	export  VERSION_MAJOR=6
+	export  VERSION_MINOR=66
+	export  VERSION_MAINTENANCE=666
+	export  VERSION_PATCH=6666
+
+	export XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+
+	export REPOSITORY_ROOT=s:/build/release_candidate
+	export SYNC_FOLDER_ROOT=s:/global/Us2Cdc/engineering
+
+	export MAKE_CFLAGS_32="-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=15"
+	export MAKE_CFLAGS_64="-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=15"
+	export MAKE_CSFLAGS="-k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=15"
+	export MAKE_INSTALLFLAGS="-k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=15"
+
+	export NLDEVBUILD=TRUE
+	export NLPLUGIN_BASE_FOLDER=$NLBUILDROOT/Bin/Plugins
+
+6. make your build, example:
+	cd $WORKSPACE;
+	./buildRelease
+	make -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=15 TARGETSFILE=prod/common.cpp.targets >BuildCommonCpp.log
+	make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 BUILD_NUMBER=15 TARGETSFILE=prod/common.cs.targets  >BuildCommonCs.log
+	make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 BUILD_NUMBER=15 TARGETSFILE=prod/sharepoint.spcommon.targets>BuildSPCommon.log
+	make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 BUILD_NUMBER=15 TARGETSFILE=prod/sharepoint.spenforcement.targets >BuildSPEnforcement.log
+	make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 BUILD_NUMBER=15 TARGETSFILE=prod/sharepoint.spedeploy.targets >BuildSPEDeploy.log
+	make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 BUILD_NUMBER=15 TARGETSFILE=prod/sharepoint.plugins.targets >BuildPlugins.log
+
+7. Others
+	1. Perl
+		1. Depends modules
+			1. perl -MCPAN -e'install text::Diff'
+			2. perl -MCPAN -e'install Win32API::Resources'
+
+

@@ -1,0 +1,6 @@
+
+TARGETS = \
+	prod/Common/Native/CE_Log_Interface \
+	prod/Common/Native/TagDocProtector \
+	prod/Common/Native/PdfEditor \
+	prod/Common/Native/wfRetry

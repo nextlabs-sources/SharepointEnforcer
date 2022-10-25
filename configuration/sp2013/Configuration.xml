@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration name="test" xmlns="http://www.nextlabs.com/configurationSchema">
+  <SPEConfiguration>
+    <PropertyBag disabled="false" level="SiteCollection">
+      <Property disabled="false" name="input your site property name" attributename="attribute name whose value from site property" />
+    </PropertyBag>
+    <PropertyBag disabled="false" level="SubSite">
+      <Property disabled="false" name="Title" attributename="SiteTitle" />
+    </PropertyBag>
+    <UserAttribute>
+      <Claims disabled="false">
+        <Claim name="emailAddress" attributename="EmailAddress" claimtype="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" disabled="false" />
+        <Claim name="adfsGroup"  claimtype="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" prefix="ADFS_" disabled="false" />
+      </Claims>
+      <UserProfile disabled="false">
+        <Property disabled="false" name="SPS-Location" attributename="PhysicalLocation" />
+        <Property disabled="false" name="Department" attributename="Department" />
+      </UserProfile>
+    </UserAttribute>
+  </SPEConfiguration> 
+</Configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<SPDisposeCheckSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AssembliesToAnalyze>
+    <ProjectAssemblyInfo>
+      <AssemblyPath>C:\spe_6.5_install_1303\prod\Nextlabs.Entitlement.Wizard\obj\SP2010Debug\en-US\Nextlabs.Entitlement.Wizard.resources.dll</AssemblyPath>
+      <ProjectUniqueName>Nextlabs.Entitlement.Wizard_SP2010.csproj</ProjectUniqueName>
+    </ProjectAssemblyInfo>
+    <ProjectAssemblyInfo>
+      <AssemblyPath>C:\spe_6.5_install_1303\prod\Nextlabs.Entitlement.Wizard\obj\SP2010Debug\Nextlabs.Entitlement.Wizard.exe</AssemblyPath>
+      <ProjectUniqueName>Nextlabs.Entitlement.Wizard_SP2010.csproj</ProjectUniqueName>
+    </ProjectAssemblyInfo>
+  </AssembliesToAnalyze>
+  <IsOn>false</IsOn>
+  <Debug>false</Debug>
+  <V1>false</V1>
+  <ShowUndocumented>false</ShowUndocumented>
+  <OnlyUndocumented>false</OnlyUndocumented>
+  <TreatProblemsAs>Errors</TreatProblemsAs>
+  <PathToSPDisposeCheck>C:\Program Files (x86)\Microsoft\Sharepoint Dispose Check\SPDisposeCheck.exe</PathToSPDisposeCheck>
+  <ExecuteAfterBuild>false</ExecuteAfterBuild>
+</SPDisposeCheckSettings>

@@ -1,0 +1,10 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction Id="{B88A80FC-64A2-422c-9755-9471DFE83135}"
+    	GroupId="Permissions" 
+      Location="Microsoft.SharePoint.ListEdit"
+    	Sequence="11"
+	    Title="Entitlement Manager Information Control">
+    	<UrlAction Url="_layouts/ICSetting.aspx?List={ListId}" />
+    </CustomAction>
+
+</Elements>

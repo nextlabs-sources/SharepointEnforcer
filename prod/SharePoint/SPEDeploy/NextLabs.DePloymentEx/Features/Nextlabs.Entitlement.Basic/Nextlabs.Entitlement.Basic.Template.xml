@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" Hidden="TRUE" Creator="NextLabs Inc." SolutionId="6c15412b-290c-49ac-bd38-9b0ad852973b" Id="ddf3439c-65aa-443b-8973-b87b003c0254" ReceiverAssembly="$SharePoint.Project.AssemblyFullName$" ReceiverClass="$SharePoint.Type.26032287-3327-453e-bf4c-877e578136d3.FullName$" Scope="WebApplication" AlwaysForceInstall="TRUE">
+</Feature>

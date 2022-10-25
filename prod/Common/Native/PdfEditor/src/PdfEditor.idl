@@ -1,0 +1,37 @@
+// PdfEditor.idl : IDL source for PdfEditor
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PdfEditor.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(31EE0057-12B9-47AE-AC1A-C5C2E7F69C50),
+	dual,
+	nonextensible,
+	helpstring("IPdfHeaderFooter Interface"),
+	pointer_default(unique)
+]
+interface IPdfHeaderFooter : IDispatch{
+	[id(1), helpstring("method AddHeaderText")] HRESULT AddHeaderText([in] BSTR filePath, [in] BSTR headerText, [in] BSTR position, [in] LONG left, [in] LONG height);
+};
+[
+	uuid(A67D1B3C-273F-461F-A459-CBE89B342B1E),
+	version(1.0),
+	helpstring("PdfEditor 1.0 Type Library")
+]
+library PdfEditorLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(CC455E65-8132-4DB3-AA48-C400B70FE95C),
+		helpstring("PdfHeaderFooter Class")
+	]
+	coclass PdfHeaderFooter
+	{
+		[default] interface IPdfHeaderFooter;
+	};
+};

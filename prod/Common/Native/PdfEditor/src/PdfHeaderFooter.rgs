@@ -1,0 +1,26 @@
+HKCR
+{
+	PdfEditor.PdfHeaderFooter.1 = s 'PdfHeaderFooter Class'
+	{
+		CLSID = s '{CC455E65-8132-4DB3-AA48-C400B70FE95C}'
+	}
+	PdfEditor.PdfHeaderFooter = s 'PdfHeaderFooter Class'
+	{
+		CLSID = s '{CC455E65-8132-4DB3-AA48-C400B70FE95C}'
+		CurVer = s 'PdfEditor.PdfHeaderFooter.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CC455E65-8132-4DB3-AA48-C400B70FE95C} = s 'PdfHeaderFooter Class'
+		{
+			ProgID = s 'PdfEditor.PdfHeaderFooter.1'
+			VersionIndependentProgID = s 'PdfEditor.PdfHeaderFooter'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{A67D1B3C-273F-461F-A459-CBE89B342B1E}'
+		}
+	}
+}

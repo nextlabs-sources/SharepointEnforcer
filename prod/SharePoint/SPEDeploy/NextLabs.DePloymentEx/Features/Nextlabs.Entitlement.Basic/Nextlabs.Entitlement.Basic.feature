@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="56c1e974-ce6e-4d16-8325-7e0741b0b41a" creator="NextLabs Inc." description="Provide basic enforcement for Open, Edit and Delete operation on site, portal and item.Activate or Deactivate this feature need some time,Please wait a moment." isHidden="true" featureId="56c1e974-ce6e-4d16-8325-7e0741b0b41a" imageUrl="" receiverAssembly="$SharePoint.Project.AssemblyFullName$" receiverClass="$SharePoint.Type.26032287-3327-453e-bf4c-877e578136d3.FullName$" scope="WebApplication" solutionId="ff25695e-72e1-4438-9506-f8a7a45b136e" title="NextLabs Entitlement Basic" version="" deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel">
+  <projectItems>
+    <projectItemReference itemId="e4871eb6-a497-49c3-8d58-d20a349a1317" />
+  </projectItems>
+</feature>

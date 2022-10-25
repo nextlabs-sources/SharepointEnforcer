@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="FALSE" Creator="NextLabs Inc." Description="Provide basic enforcement for Open, Edit and Delete operation on site, portal and item.Activate or Deactivate this feature need some time,Please wait a moment." Hidden="TRUE" Id="ddf3439c-65aa-443b-8973-b87b003c0254" ReceiverAssembly="NextLabs.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e03e4c7ee29d89ce" ReceiverClass="NextLabs.Solution.Features.NextLabsEntitlementBasic.NextLabsEntitlementBasicEventReceiver" Scope="WebApplication" SolutionId="6c15412b-290c-49ac-bd38-9b0ad852973b" Title="NextLabs Entitlement Basic">
+  <ElementManifests>
+    <ElementManifest Location="BasicElements\Elements.xml" />
+    <ElementManifest Location="BasicElements\spesitemenus.xml" />
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <Component>
+    <Name>NextLabs.SiteDeleteEventReceiver</Name>
+    <Assembly>NextLabs.SPEnforcer, Version=1.0.2600.3601, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+    <Class>NextLabs.SPEnforcer.WebSiteHandler</Class>
+    <Type>202</Type>
+    <Sequence>10000</Sequence>
+  </Component>
+
+  <Component>
+    <Name>NextLabs.SiteMoveEventReceiver</Name>
+    <Assembly>NextLabs.SPEnforcer, Version=1.0.2600.3601, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e</Assembly>
+    <Class>NextLabs.SPEnforcer.WebSiteHandler</Class>
+    <Type>203</Type>
+    <Sequence>10000</Sequence>
+  </Component>
+</Config>

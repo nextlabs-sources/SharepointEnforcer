@@ -1,0 +1,42 @@
+#include "Setup.h"  
+#include "ifx.h" 
+#include "include/servicecontrol.h" 
+#include "include/logging.h"
+#include "include/common.h"
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  ValidateUninstallPassword
+//                                                                           
+//  Purpose:  Attempts to shutdown the agent service and displays a UI if necessary.
+//			  This function is used only in the UI sequence.
+//
+//  Returns: 0 if sucessful
+//           1 if password is incorrect
+//           2 if some other fatal error occured
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+function INT ValidateAdministrationPassword(hMSI)
+	INT result; 
+    STRING resultAsString;
+begin    
+	WriteToLogFile(hMSI, "Begin ValidateAdministrationPassword()");
+
+ 	result = StopService(hMSI);             
+
+ 	switch (result)
+		case ERROR_INCORRECT_PASSWORD:			
+ 			DenyNextDialog(hMSI);
+			ShowModalDialog(hMSI, "Invalid Password", "The password you have entered is invalid. Please check your password and try again.", SEVERE);
+	 	case ERROR_AGENT_NOT_STOPPED:                            
+	 		DenyNextDialog(hMSI);
+	 		ShowModalDialog(hMSI, "Error", "An unexpected error occured. The Policy Controller service could not be stopped.", SEVERE);	 
+		case ERROR_SUCCESS:      
+			AllowNextDialog(hMSI);                      
+	 	default:
+	 		DenyNextDialog(hMSI);
+	 		ShowModalDialog(hMSI, "Error", "An unexpected error occured. The Policy Controller service could not be stopped.", SEVERE);	                                            				
+	 endswitch;
+	 
+	 return ERROR_SUCCESS;
+end;

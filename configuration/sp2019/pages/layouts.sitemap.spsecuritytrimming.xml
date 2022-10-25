@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<siteMap enableLocalization="true">
+	<siteMapNode url="/_layouts/SPSecurityTrimming.aspx" parentUrl="/_layouts/settings.aspx" title="SharePoint Security Trimming Settings"/>
+  <siteMapNode url="/_layouts/SPListTrimming.aspx" parentUrl="/_layouts/listedit.aspx" title="SharePoint List Trimming Settings"/>
+</siteMap>

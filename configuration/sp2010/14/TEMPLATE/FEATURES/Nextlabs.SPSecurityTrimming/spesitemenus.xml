@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+      <CustomAction 
+        Id="SPESiteMenus.SiteSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="106"
+	      RequireSiteAdministrator="TRUE" 
+        Title="SharePoint Security Trimming">
+        <UrlAction Url="_layouts/SPSecurityTrimming.aspx"/>
+      </CustomAction>
+    </Elements>

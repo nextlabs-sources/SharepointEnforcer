@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F67BAAB-3E54-44CE-B4AC-6550E12E34AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NextLabs.PLE</RootNamespace>
+    <AssemblyName>NextLabs.PLE</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>NextLabs.PLE.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SP2010Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>SP2010Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SP2010</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SP2010Release|AnyCPU' ">
+    <OutputPath>SP2010Release\</OutputPath>
+    <DefineConstants>TRACE;SP2010</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>true</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\sp2010\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="NextLabs.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=e03e4c7ee29d89ce, processorArchitecture=MSIL">
+      <SpecificVersion>true</SpecificVersion>
+      <HintPath>..\..\NextLabs.Common\NextLabs.Common\$(ConfigurationName)\NextLabs.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NextLabs.CSCInvoke, Version=2.0.0.0, Culture=neutral, PublicKeyToken=26560a09a369d1f9, processorArchitecture=MSIL">
+      <SpecificVersion>true</SpecificVersion>
+      <HintPath>..\..\..\xlib\release_dotnet\NextLabs.CSCInvoke.dll</HintPath>
+    </Reference>
+    <Reference Include="NextLabs.Diagnostic, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b0c42a051caacdec, processorArchitecture=MSIL">
+      <SpecificVersion>true</SpecificVersion>
+      <HintPath>..\..\NextLabs.Diagnostic\$(ConfigurationName)\NextLabs.Diagnostic.dll</HintPath>
+    </Reference>
+    <Reference Include="Nextlabs.SPEConfigModule, Version=3.0.0.0, Culture=neutral, PublicKeyToken=66eac961f5a2b15e, processorArchitecture=MSIL">
+      <SpecificVersion>true</SpecificVersion>
+      <HintPath>..\..\Nextlabs.SPEConfigModule\Nextlabs.SPEConfigModule\$(ConfigurationName)\Nextlabs.SPEConfigModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nextlabs.PLE.AdminPageLogs.cs" />
+    <Compile Include="NextLabs.PLE.HttpModule.cs" />
+    <Compile Include="NextLabs.PLE.Log.cs" />
+    <Compile Include="Nextlabs.PLE.PageFactory.cs" />
+    <Compile Include="NextLabs.PLE.PageResource.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NextLabs.PLE.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+      <!--perl $(ProjectDir)/../../../../../../../build/updateVersionInfo_csproj.pl $(ProjectDir)/AssemblyInfo.cs $(ProjectDir)/Makefile.inc dev $(PlatformName)-->
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

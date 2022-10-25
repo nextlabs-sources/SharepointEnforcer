@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6c15412b-290c-49ac-bd38-9b0ad852973b" solutionId="6c15412b-290c-49ac-bd38-9b0ad852973b" resetWebServer="false" name="NextLabs.Entitlement" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Nextlabs.SPSecurityTrimming.dll" deploymentTarget="GlobalAssemblyCache" sourcePath=".\PackageCustomTemp\Nextlabs.SPSecurityTrimming.dll">
+      <safeControls>
+        <safeControl assemblyName="Nextlabs.SPSecurityTrimming, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7030e9011c5eb860" namespaceName="Nextlabs.SPSecurityTrimming" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="d02197ed-8a30-4e72-ac11-88af0ca20bb2" />
+    <featureReference itemId="9344be7e-9117-482a-84ad-5d1686c3f5dc" />
+    <featureReference itemId="72b54eb1-56c6-4637-91d0-d34f6c9aeccf" />
+  </features>
+</package>

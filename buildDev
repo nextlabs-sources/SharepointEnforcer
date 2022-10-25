@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+# DESCRIPTION
+#	Invoke developer build
+#
+# USAGE:
+#	Steps to invoke this script.
+#		export NLEXTERNALDIR=<path>
+#		export NLEXTERNALDIR2=<path>
+#		export BUILD_NUMBER=<#>
+#		source setEnv
+#		./buildDev
+#
+# HUDSON BUILD:
+#	cd $WORKSPACE
+#	export NLEXTERNALDIR=c:/hudson/jobs/external_latest/workspace
+#	export NLEXTERNALDIR2=c:/hudson/jobs/external_main_latest/workspace
+#	source setEnv
+#	./buildDev
+#
+# Build Options:
+#	make -f build/Makefile.compile || exit $?
+#	make -f build/Makefile.compile compile install || exit $?
+
+
+#
+# Check for errors
+#
+
+if [ ! -d ./xlib ]; then
+	echo "### ERROR: Missing xlib directory ./xlib"
+	exit 1
+fi
+
+
+#
+# Compile
+#
+
+LOG_FILE=buildDev.log
+
+(
+set -x
+# Prepare environment
+./configure --type=dev || exit $?
+source build.config
+
+# Compile code and build installers
+make -f build/Makefile.compile compile || exit $?
+build/checkBuildLog.pl $LOG_FILE || exit $?
+set +x
+) 2>&1 | tee $LOG_FILE
+
+exit ${PIPESTATUS[0]}

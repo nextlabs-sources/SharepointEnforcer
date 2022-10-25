@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="TRUE" Hidden="TRUE" Id="b710de11-a2b7-49ff-b6e4-7bb5449178a3" ReceiverAssembly="NextLabs.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e03e4c7ee29d89ce" ReceiverClass="NextLabs.Deployment.Features.NextLabs.Entitlement.Administration.NextLabsEntitlementEventReceiver">
+</Feature>

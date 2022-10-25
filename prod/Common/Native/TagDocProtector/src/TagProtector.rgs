@@ -1,0 +1,27 @@
+HKCR
+{
+	TagDocProtector.TagProtector.1 = s 'TagProtector Class'
+	{
+		CLSID = s '{6EC4BB1F-3F73-4799-BC98-A3DF9AE23A0B}'
+	}
+	TagDocProtector.TagProtector = s 'TagProtector Class'
+	{
+		CLSID = s '{6EC4BB1F-3F73-4799-BC98-A3DF9AE23A0B}'
+		CurVer = s 'TagDocProtector.TagProtector.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6EC4BB1F-3F73-4799-BC98-A3DF9AE23A0B} = s 'TagProtector Class'
+		{
+			ProgID = s 'TagDocProtector.TagProtector.1'
+			VersionIndependentProgID = s 'TagDocProtector.TagProtector'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{501F8C10-C16E-4B95-B5D8-EC559315DEB0}'
+		}
+	}
+}

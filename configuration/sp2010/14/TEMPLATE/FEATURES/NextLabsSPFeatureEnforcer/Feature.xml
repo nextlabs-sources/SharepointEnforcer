@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) NextLabs, Inc. 2007 All rights reserved. -->
+<Feature
+  AlwaysForceInstall = "TRUE"
+  Id="1AE19FFB-20F1-43b8-B935-D669F72EC147"
+  Title="NextLabs Security Enforcer Feature Event"
+  Description="Used for receiving FEATURE EVENTS of a web without register the handler for all lists in the web individually."
+  Creator = "NextLabs, Inc." 
+  Hidden ="TRUE" 
+  Version="6.0.0.0"
+  Scope="Web"
+  ReceiverAssembly="NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e"
+  ReceiverClass="NextLabs.SPEnforcer.FeatureHandler"
+  xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

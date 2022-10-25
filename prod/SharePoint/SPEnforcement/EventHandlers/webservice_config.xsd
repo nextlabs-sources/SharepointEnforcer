@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.nextlabs.com/configurationSchema"
+	xmlns:tns="http://www.nextlabs.com/configurationSchema"
+	elementFormDefault="qualified">
+
+  <element name="WebServiceConfig">
+    <complexType>
+      <sequence>
+        <element name="WebService" type="tns:WebService" minOccurs="0" maxOccurs="unbounded"/>
+      </sequence>
+    </complexType>
+  </element>
+  <complexType name="WebService">
+    <sequence>
+      <element name="Method" minOccurs="0" type="tns:Method" maxOccurs="unbounded"/>
+      <element name="WebServiceNameSpace" minOccurs="0" type="tns:WebServiceNameSpace" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="name" type="string"></attribute>
+    <attribute name="disabled" type="boolean" default="false"></attribute>
+  </complexType>
+
+  <complexType name="Method">
+    <attribute name="policyaction" type="string" />
+    <attribute name="conditionxpath" type="string" />
+    <attribute name="patternxpath" type="string" />
+    <attribute name="urlkey" type="string" />
+    <attribute name="type" type="string" />
+    <attribute name="class" type="string" />
+    <attribute name="classtype" type="string" />
+    <attribute name="resourcetype" type="string" />
+    <attribute name="disabled" type="boolean" default="false"/>
+  </complexType>
+
+  <complexType name="WebServiceNameSpace">
+    <attribute name="name" type="string" />
+    <attribute name="value" type="string" /> 
+  </complexType>
+</schema>

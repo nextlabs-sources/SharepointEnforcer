@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements Id="AB1051B7-1E4D-43dc-90A1-EAC025E96894" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control Id="ComplianceControl" Sequence="100"
+           ControlClass="Nextlabs.SPSecurityTrimming.SPSecurityTrimmingControl"
+           ControlAssembly="Nextlabs.SPSecurityTrimming, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7030e9011c5eb860">
+  </Control>
+</Elements>

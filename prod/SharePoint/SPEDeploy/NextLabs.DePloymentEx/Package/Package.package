@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ff25695e-72e1-4438-9506-f8a7a45b136e" solutionId="ff25695e-72e1-4438-9506-f8a7a45b136e" resetWebServer="false" sharePointProductVersion="16.0" name="NextLabs.Deployment" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="ceSPService.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\ceSPService.dll">
+      <safeControls>
+        <safeControl assemblyName="ceSPService, Version=3.0.0.0, Culture=neutral, PublicKeyToken=46b3b99bacb92dfa" namespaceName="ceSPService" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="NextLabs.CSCInvoke.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\NextLabs.CSCInvoke.dll">
+      <safeControls>
+        <safeControl assemblyName="NextLabs.CSCInvoke, Version=2.0.0.0, Culture=neutral, PublicKeyToken=26560a09a369d1f9" namespaceName="nextlabs.cscinvoke" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="NextLabs.Diagnostic.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\NextLabs.Diagnostic.dll">
+      <safeControls>
+        <safeControl assemblyName="NextLabs.Diagnostic, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b0c42a051caacdec" namespaceName="NextLabs.Diagnostic" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="NextLabs.PLE.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\NextLabs.PLE.dll">
+      <safeControls>
+        <safeControl assemblyName="NextLabs.PLE, Version=3.0.0.0, Culture=neutral, PublicKeyToken=72dcea101a86dcde" namespaceName="nextlabs.ple" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Nextlabs.SPEConfigModule.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\Nextlabs.SPEConfigModule.dll">
+      <safeControls>
+        <safeControl assemblyName="Nextlabs.SPEConfigModule, Version=3.0.0.0, Culture=neutral, PublicKeyToken=66eac961f5a2b15e" namespaceName="Nextlabs.SPEConfigModule" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="NextLabs.SPEnforcer.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\NextLabs.SPEnforcer.dll">
+      <safeControls>
+        <safeControl assemblyName="NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e" namespaceName="NextLabs.SPEnforcer" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Nextlabs.SPSecurityTrimming.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\Nextlabs.SPSecurityTrimming.dll">
+      <safeControls>
+        <safeControl assemblyName="Nextlabs.SPSecurityTrimming, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7030e9011c5eb860" namespaceName="Nextlabs.SPSecurityTrimming" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="NextLabs.Common.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\NextLabs.Common.dll">
+      <safeControls>
+        <safeControl assemblyName="NextLabs.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=e03e4c7ee29d89ce" namespaceName="nextlabs.common" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="QueryCloudAZSDK.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\Common\Archive\Binary\Release_dotnet\QueryCloudAZSDK.dll">
+      <safeControls>
+        <safeControl assemblyName="QueryCloudAZSDK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=e03e4c7ee29d89ce" namespaceName="QueryCloudAZSDK" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="log4net.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Bin\PackegedGacDll\log4net.dll">
+      <safeControls>
+        <safeControl assemblyName="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a" namespaceName="log4net" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="d2893945-fc41-4ca1-a32f-9e22078fff8f" />
+    <featureReference itemId="7214a657-3e45-470f-978e-c5883a674f1e" />
+    <featureReference itemId="d59a4349-a1c0-4898-8927-0e0f47d993f6" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="b234736f-5ff2-41dd-94a3-b84d0d11906d" />
+    <projectItemReference itemId="ce2522f3-7c24-4bcf-a703-9e934a64b0d5" />
+    <projectItemReference itemId="e239811b-4d81-4a09-8850-f63738596aed" />
+    <projectItemReference itemId="7c64d632-c90d-4e5a-8baf-b26a1a5794e3" />
+  </projectItems>
+</package>

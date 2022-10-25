@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<siteMap enableLocalization="true">
+	<siteMapNode url="/_layouts/ICSetting.aspx" parentUrl="/_layouts/listedit.aspx" title="Entitlement Manager Information Control Settings"/>
+  <siteMapNode url="/_layouts/ICLogViewer.aspx" parentUrl="/_layouts/listedit.aspx" title="Information Control Log Viewer"/>
+</siteMap>

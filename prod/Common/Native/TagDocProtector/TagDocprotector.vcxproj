@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>TagDocProtector</ProjectName>
+    <ProjectGuid>{3CBCA515-F5A3-4804-BD4D-7D517230B115}</ProjectGuid>
+    <RootNamespace>TagDocProtector</RootNamespace>
+    <Keyword>AtlProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.31227.257</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(Configuration)_win_x86\</OutDir>
+    <IntDir>$(Configuration)_win_x86\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Configuration)_win_x64\</OutDir>
+    <IntDir>$(Configuration)_win_x64\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(Configuration)_win_x86\</OutDir>
+    <IntDir>$(Configuration)_win_x86\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Configuration)_win_x64\</OutDir>
+    <IntDir>$(Configuration)_win_x64\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>TagDocProtector.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>TagDocProtector.h</HeaderFileName>
+      <DllDataFileName>dlldata</DllDataFileName>
+      <InterfaceIdentifierFileName>TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TagDocProtector_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./include;$(NLBUILDROOT)/prod/Common/Archive/include;./idlgen/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>comsvcs.lib;resattrlib32.lib;resattrmgr32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TagDocProtector32.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NLBUILDROOT)\prod\Common\Archive\Binary\release_win_x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\TagDocProtector.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <ImportLibrary />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>TagDocProtector.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>TagDocProtector.h</HeaderFileName>
+      <DllDataFileName>dlldata</DllDataFileName>
+      <InterfaceIdentifierFileName>TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TagDocProtector_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./include;$(NLBUILDROOT)/prod/Common/Archive/include;./idlgen/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>comsvcs.lib;resattrlib.lib;resattrmgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TagDocProtector.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NLBUILDROOT)\prod\Common\Archive\Binary\release_win_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\TagDocProtector.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <ImportLibrary />
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>TagDocProtector.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>TagDocProtector.h</HeaderFileName>
+      <DllDataFileName>dlldata</DllDataFileName>
+      <InterfaceIdentifierFileName>TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TagDocProtector_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>./include;$(NLBUILDROOT)/prod/Common/Archive/include;./idlgen/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>comsvcs.lib;resattrlib32.lib;resattrmgr32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TagDocProtector32.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NLBUILDROOT)\prod\Common\Archive\Binary\release_win_x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\TagDocProtector.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>TagDocProtector.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>TagDocProtector.h</HeaderFileName>
+      <DllDataFileName>dlldata</DllDataFileName>
+      <InterfaceIdentifierFileName>TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TagDocProtector_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>./include;$(NLBUILDROOT)/prod/Common/Archive/include;./idlgen/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>comsvcs.lib;resattrlib.lib;resattrmgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TagDocProtector.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NLBUILDROOT)\prod\Common\Archive\Binary\release_win_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\TagDocProtector.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="idlgen\src\TagDocProtector_i.c" />
+    <ClCompile Include="src\FileEncryptIgnore.cpp" />
+    <ClCompile Include="src\FileTagging.cpp" />
+    <ClCompile Include="src\log.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\TagDocProtector.cpp" />
+    <ClCompile Include="src\TagProtector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="src\TagDocProtector.def" />
+    <None Include="src\TagDocProtector.rgs" />
+    <None Include="src\TagProtector.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="src\TagDocProtector.idl">
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./include/TagDocProtector.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./src/TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./src/TagDocProtector_p.c</ProxyFileName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./include/TagDocProtector.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./src/TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./src/TagDocProtector_p.c</ProxyFileName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./include/TagDocProtector.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./src/TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./src/TagDocProtector_p.c</ProxyFileName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./include/TagDocProtector.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./src/TagDocProtector_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./src/TagDocProtector_p.c</ProxyFileName>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="idlgen\include\TagDocProtector.h" />
+    <ClInclude Include="include\FileEncryptIgnore.h" />
+    <ClInclude Include="include\FileTagging.h" />
+    <ClInclude Include="include\Globals.h" />
+    <ClInclude Include="include\log.h" />
+    <ClInclude Include="include\Resource.h" />
+    <ClInclude Include="include\stdafx.h" />
+    <ClInclude Include="include\TagProtector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\TagDocProtector.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿  <PropertyGroup Label="UserUnifySettings">
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>Bin\$(Configuration)_$(Platform)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Label="DebugDefaultSettings" Condition=" '$(Configuration)' == 'SP2016Debug' OR '$(Configuration)' == 'SP2019Debug' ">
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <ConfigurationFlag>Debug</ConfigurationFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2016Debug' ">SP2016</SPVersionFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2019Debug' ">SP2019</SPVersionFlag>
+    <DefineConstants>TRACE;DEBUG;$(SPVersionFlag)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Label="ReleaseDefaultSettings" Condition=" '$(Configuration)' == 'SP2016Release' OR '$(Configuration)' == 'SP2019Release' ">
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <ConfigurationFlag>Release</ConfigurationFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2016Release' ">SP2016</SPVersionFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2019Release' ">SP2019</SPVersionFlag>
+    <DefineConstants>TRACE;$(SPVersionFlag)</DefineConstants>
+  </PropertyGroup>

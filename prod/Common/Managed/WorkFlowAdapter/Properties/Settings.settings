@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WorkFlowAdapter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WorkFlowAdapter_WSSWorkFlow_Workflow" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://lab01-sps07/_vti_bin/workflow.asmx</Value>
+    </Setting>
+    <Setting Name="WorkFlowAdapter_WSSCEService_DocUpload" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://lab01-sps07/_layouts/ceSPService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

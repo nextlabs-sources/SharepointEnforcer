@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1EACCC98-C42B-41D9-A196-64121123835E}</ProjectGuid>
+    <RootNamespace>PdfEditor</RootNamespace>
+    <Keyword>AtlProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.31227.257</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(Configuration)_win_x86\</OutDir>
+    <IntDir>$(Configuration)_win_x86\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Configuration)_win_x64\</OutDir>
+    <IntDir>$(Configuration)_win_x64\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(Configuration)_win_x86\</OutDir>
+    <IntDir>$(Configuration)_win_x86\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Configuration)_win_x64\</OutDir>
+    <IntDir>$(Configuration)_win_x64\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>PdfEditor.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>PdfEditor_i.h</HeaderFileName>
+      <DllDataFileName>dlldata</DllDataFileName>
+      <InterfaceIdentifierFileName>PdfEditor_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>PdfEditor_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./idlgen;./include;$(NLEXTERNALDIR)/podofo-0.8.1/podofo;$(NLEXTERNALDIR)/podofo-0.8.1/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>PoDoFoLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NLEXTERNALDIR)/podofo-0.8.1/release_lib_win32_vs2008;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\PdfEditor.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>PdfEditor.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>PdfEditor_i.h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>PdfEditor_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>PdfEditor_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./idlgen;./include;$(NLEXTERNALDIR)/podofo-0.8.1/podofo;$(NLEXTERNALDIR)/podofo-0.8.1/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>PoDoFoLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NLEXTERNALDIR)/podofo-0.8.1/release_lib_x64_vs2008;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\PdfEditor.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>PdfEditor.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>PdfEditor_i.h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>PdfEditor_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>PdfEditor_p.c</ProxyFileName>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>./idlgen;./include;$(NLEXTERNALDIR)/podofo-0.8.1/podofo;$(NLEXTERNALDIR)/podofo-0.8.1/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>PoDoFoLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NLEXTERNALDIR)/podofo-0.8.1/release_lib_win32_vs2008;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\PdfEditor.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>PdfEditor.tlb</TypeLibraryName>
+      <OutputDirectory>idlgen</OutputDirectory>
+      <HeaderFileName>PdfEditor_i.h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>PdfEditor_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>PdfEditor_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>./idlgen;./include;$(NLEXTERNALDIR)/podofo-0.8.1/podofo;$(NLEXTERNALDIR)/podofo-0.8.1/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>./include;../include;./idlgen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>PoDoFoLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NLEXTERNALDIR)/podofo-0.8.1/release_lib_x64_vs2008;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\PdfEditor.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>set OrgErrorLevel=%25ErrorLevel%25
+set ErrorLevel=0
+echo Org error level is %25OrgErrorLevel%25 backup it
+
+set SourcePath=$(ProjectDir)$(OutDir)
+echo SourcePath=%25SourcePath%25
+if /i $(Platform) EQU Win32 (
+set PlatformTarget=x86
+) else (
+set PlatformTarget=x64
+)
+
+echo PlatformTarget=%25PlatformTarget%25
+set DestinationPath=$(NLBUILDROOT)/Bin/$(Configuration)_win_%25PlatformTarget%25
+echo DestinationPath=%25DestinationPath%25
+
+if not exist "$(NLBUILDROOT)/Bin" mkdir "$(NLBUILDROOT)/Bin"
+if not exist "%25DestinationPath%25" mkdir "%25DestinationPath%25"
+
+echo Begin copy files from %25SourcePath%25 to %25DestinationPath%25
+
+copy /y "%25SourcePath%25\*.dll" "%25DestinationPath%25"
+copy /y "%25SourcePath%25\*.pdb" "%25DestinationPath%25"
+
+echo End copy files from %25SourcePath%25 to %25DestinationPath%25
+
+if %25ErrorLevel%25 NEQ 0 (
+echo Failed to copy failed in post event with error level %25ErrorLevel%25
+) else (
+echo Success to copy success in post event, revert org error level %25OrgErrorLevel%25
+)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="idlgen\PdfEditor_i.c" />
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\PdfEditor.cpp" />
+    <ClCompile Include="src\PdfHeaderFooter.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PdfEditor.def" />
+    <None Include="ReadMe.txt" />
+    <None Include="src\PdfEditor.rgs" />
+    <None Include="src\PdfHeaderFooter.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="src\PdfEditor.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="idlgen\PdfEditor_i.h" />
+    <ClInclude Include="include\dllmain.h" />
+    <ClInclude Include="include\PdfHeaderFooter.h" />
+    <ClInclude Include="include\resource.h" />
+    <ClInclude Include="include\stdafx.h" />
+    <ClInclude Include="include\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\PdfEditor.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

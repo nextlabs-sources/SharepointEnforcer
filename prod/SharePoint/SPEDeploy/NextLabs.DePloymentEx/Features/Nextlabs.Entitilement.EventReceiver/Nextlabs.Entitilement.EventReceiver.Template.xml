@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" AlwaysForceInstall="TRUE" ActivateOnDefault="FALSE" ReceiverAssembly="NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e" ReceiverClass="NextLabs.SPEnforcer.FeatureHandler" Hidden="TRUE" Description="Register event receiver on list and item to support content analysis and other functionalities." Id="4f6fd05e-b392-418b-9dbf-b0fb92f12271">
+  <ElementManifests>
+    <ElementManifest Location="EventReceiverElements\itemElements.xml"/>
+    <ElementManifest Location="EventReceiverElements\listElements.xml"/>
+    <ElementManifest Location="EventReceiverElements\menus.xml"/>
+  </ElementManifests>
+</Feature>

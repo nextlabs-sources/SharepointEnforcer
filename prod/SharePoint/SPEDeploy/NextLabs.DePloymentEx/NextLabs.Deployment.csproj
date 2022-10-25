@@ -1,0 +1,344 @@
+﻿<Project ToolsVersion="16.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">SP2016Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9AA022EB-20E7-4119-823C-BF03A9B95873}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NextLabs.Deployment</RootNamespace>
+    <AssemblyName>NextLabs.Deployment</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
+    <SandboxedSolution>False</SandboxedSolution>
+    <IncludeAssemblyInPackage>True</IncludeAssemblyInPackage>
+    <PreDeploymentCommand>
+    </PreDeploymentCommand>
+    <PostDeploymentCommand>
+    </PostDeploymentCommand>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'SP2016Debug' OR '$(Configuration)' == 'SP2019Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\$(Configuration)_$(Platform)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ConfigurationFlag>Debug</ConfigurationFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2016Debug' ">SP2016</SPVersionFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2019Debug' ">SP2019</SPVersionFlag>
+    <DefineConstants>TRACE;DEBUG;$(SPVersionFlag)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'SP2016Release' OR '$(Configuration)' == 'SP2019Release' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\$(Configuration)_$(Platform)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ConfigurationFlag>Release</ConfigurationFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2016Release' ">SP2016</SPVersionFlag>
+    <SPVersionFlag Condition=" '$(Configuration)' == 'SP2019Release' ">SP2019</SPVersionFlag>
+    <DefineConstants>TRACE;DEBUG;$(SPVersionFlag)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Deployment.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'SP2016Debug'">
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\Microsoft.Office.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\Microsoft.Office.Server.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.ApplicationPages">
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\Microsoft.SharePoint.ApplicationPages.dll</HintPath>
+    </Reference>
+    <Reference Include="NextLabs.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=e03e4c7ee29d89ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLBUILDROOT)\Bin\$(ConfigurationFlag)_dotnet\$(ConfigurationName)\NextLabs.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NextLabs.Diagnostic, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b0c42a051caacdec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLBUILDROOT)\Bin\$(ConfigurationFlag)_dotnet\$(ConfigurationName)\NextLabs.Diagnostic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLEXTERNALDIR)\microsoft\sharepoint\$(SPVersionFlag)\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="NextLabs.SPEnforcer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5ef8e9c15bdfa43e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLBUILDROOT)\Bin\$(ConfigurationFlag)_dotnet\$(ConfigurationName)\NextLabs.SPEnforcer.dll</HintPath>
+    </Reference>
+    <Reference Include="Nextlabs.SPSecurityTrimming, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7030e9011c5eb860, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(NLBUILDROOT)\Bin\$(ConfigurationFlag)_dotnet\$(ConfigurationName)\Nextlabs.SPSecurityTrimming.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonLib.cs" />
+    <Compile Include="DenyPage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeatureController.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeatureManagerPage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Features\Nextlabs.Entitlement.Administration\Nextlabs.Entitlement.Administration.EventReceiver.cs">
+      <DependentUpon>Nextlabs.Entitlement.Administration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Nextlabs.Entitlement.Basic\Nextlabs.Entitlement.Basic.EventReceiver.cs">
+      <DependentUpon>Nextlabs.Entitlement.Basic.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProgressBarStatus.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchResultTrimmingPage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatusReport.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BasicElements\error-template\.DS_Store" />
+    <None Include="BasicElements\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e4871eb6-a497-49c3-8d58-d20a349a1317}</SharePointProjectItemId>
+    </None>
+    <None Include="CentralAdministratorElements\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a63d77be-239e-4540-9a15-b39228112980}</SharePointProjectItemId>
+    </None>
+    <None Include="Deployment.snk" />
+    <None Include="EventReceiverElements\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e7bb4400-c6a5-4714-9859-468e8a99b787}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Nextlabs.Entitilement.EventReceiver\Nextlabs.Entitilement.EventReceiver.feature">
+      <FeatureId>{d59a4349-a1c0-4898-8927-0e0f47d993f6}</FeatureId>
+    </None>
+    <None Include="Features\Nextlabs.Entitlement.Basic\Nextlabs.Entitlement.Basic.feature">
+      <FeatureId>{7214a657-3e45-470f-978e-c5883a674f1e}</FeatureId>
+    </None>
+    <None Include="Features\Nextlabs.Entitlement.Administration\Nextlabs.Entitlement.Administration.feature">
+      <FeatureId>{d2893945-fc41-4ca1-a32f-9e22078fff8f}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b234736f-5ff2-41dd-94a3-b84d0d11906d}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\layouts.master" />
+    <None Include="Layouts\PolicyControllerLibrary\bundle.bin" />
+    <None Include="Layouts\SharePoint Enforcer\bin\InstallBasicFeatureFor2016Mixed.ps1" />
+    <None Include="Layouts\SharePoint Enforcer\bin\InstallEventReceiverFeatureFor2016Mixed.ps1" />
+    <None Include="Layouts\SharePoint Enforcer\bin\NextLabs.Entitlement.Wizard.exe.config" />
+    <None Include="Layouts\SharePoint Enforcer\bin\UninstallBasicFeatureFor2016Mixed.ps1" />
+    <None Include="Layouts\SharePoint Enforcer\bin\UninstallEventReceiverFeatureFor2016Mixed.ps1" />
+    <None Include="Layouts\SharePoint Enforcer\config\FastSearch.filter" />
+    <None Include="Layouts\SharePoint Enforcer\config\Log.Config" />
+    <None Include="Layouts\SharePoint Enforcer\config\Page_PostWord.cfg" />
+    <None Include="Layouts\SharePoint Enforcer\config\Page_PostWord2010.cfg" />
+    <None Include="Layouts\SharePoint Enforcer\config\PluginFrame.ini" />
+    <None Include="Layouts\SharePoint Enforcer\config\PreAuthPluginConfig.ini" />
+    <None Include="Layouts\SharePoint Enforcer\config\soap_define.cfg" />
+    <None Include="Layouts\SharePoint Enforcer\config\SPEConfig.cfg" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ce2522f3-7c24-4bcf-a703-9e934a64b0d5}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{ff25695e-72e1-4438-9506-f8a7a45b136e}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Resources1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7c64d632-c90d-4e5a-8baf-b26a1a5794e3}</SharePointProjectItemId>
+    </None>
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e239811b-4d81-4a09-8850-f63738596aed}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Layouts\CommonLibrary\bin32\" />
+    <Folder Include="Layouts\SharePoint Enforcer\solution\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BasicElements\Elements.xml" />
+    <Content Include="BasicElements\error-template\access-error.html" />
+    <Content Include="BasicElements\error-template\Background.png" />
+    <Content Include="BasicElements\error-template\DenyPage.aspx" />
+    <Content Include="BasicElements\error-template\error.png" />
+    <Content Include="BasicElements\error-template\logo.png" />
+    <Content Include="BasicElements\spesitemenus.xml" />
+    <Content Include="CentralAdministratorElements\Elements.xml" />
+    <Content Include="EventReceiverElements\itemElements.xml" />
+    <Content Include="EventReceiverElements\listElements.xml" />
+    <Content Include="EventReceiverElements\menus.xml" />
+    <Content Include="Features\Nextlabs.Entitilement.EventReceiver\Nextlabs.Entitilement.EventReceiver.Template.xml">
+      <DependentUpon>Nextlabs.Entitilement.EventReceiver.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Nextlabs.Entitlement.Basic\Nextlabs.Entitlement.Basic.Template.xml">
+      <DependentUpon>Nextlabs.Entitlement.Basic.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Nextlabs.Entitlement.Administration\Nextlabs.Entitlement.Administration.Template.xml">
+      <DependentUpon>Nextlabs.Entitlement.Administration.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\featuremanager\Active.gif" />
+    <Content Include="Images\featuremanager\ActiveNoCb.gif" />
+    <Content Include="Images\featuremanager\ajax-loader.gif" />
+    <Content Include="Images\featuremanager\Deactive.gif" />
+    <Content Include="Images\featuremanager\DeactiveNoCb.gif" />
+    <Content Include="Images\featuremanager\MissingFeatures.gif" />
+    <Content Include="Images\nxlspelogo.ico" />
+    <Content Include="Images\nxlspelogo.jpg" />
+    <Content Include="Layouts\CALogViewer.aspx" />
+    <Content Include="Layouts\ceSPService.asmx" />
+    <Content Include="Layouts\cespservicedisco.aspx" />
+    <Content Include="Layouts\ceSPServicewsdl.aspx" />
+    <Content Include="Layouts\CommonLibrary\bin64\celog.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\CELog2.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\cesdk.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\nl_sysenc_lib.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\PoDoFoLib.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\resattrlib.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\resattrmgr.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\tag_office2k7.dll" />
+    <Content Include="Layouts\CommonLibrary\bin64\zlibwapi.dll" />
+    <Content Include="Layouts\editcaschedule.aspx" />
+    <Content Include="Layouts\featuremanager\FeatureController.aspx" />
+    <Content Include="Layouts\featuremanager\FeatureManager.aspx" />
+    <Content Include="Layouts\featuremanager\FeatureStatus.aspx" />
+    <Content Include="Layouts\featuremanager\NextLabs.Entitlement.Basic\BasicElements\Elements.xml" />
+    <Content Include="Layouts\featuremanager\NextLabs.Entitlement.Basic\BasicElements\spesitemenus.xml" />
+    <Content Include="Layouts\featuremanager\NextLabs.Entitlement.Basic\Feature.xml" />
+    <Content Include="Layouts\featuremanager\NextLabs.Entitlement.EventReceiver\EventReceiverElements\itemElements.xml" />
+    <Content Include="Layouts\featuremanager\NextLabs.Entitlement.EventReceiver\EventReceiverElements\listElements.xml" />
+    <Content Include="Layouts\featuremanager\NextLabs.Entitlement.EventReceiver\EventReceiverElements\menus.xml" />
+    <Content Include="Layouts\featuremanager\NextLabs.Entitlement.EventReceiver\Feature.xml" />
+    <Content Include="Layouts\featuremanager\nlprogress.aspx" />
+    <Content Include="Layouts\featuremanager\TreeUtils.js" />
+    <Content Include="Layouts\featuremanager\UITools.js" />
+    <Content Include="Layouts\ICLogViewer.aspx" />
+    <Content Include="Layouts\ICSetting.aspx" />
+    <Content Include="Layouts\labelsettings.ascx" />
+    <Content Include="Layouts\layouts.sitemap.spe.xml" />
+    <Content Include="Layouts\layouts.sitemap.spsecuritytrimming.xml" />
+    <Content Include="Layouts\NxlClassificationComparison.aspx" />
+    <Content Include="Layouts\NxlEMScSetting.aspx" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\cebrain.dll" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\cecem.dll" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\ceconn.dll" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\ceeval.dll" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\celog.dll" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\cemarshal50.dll" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\cepepman.dll" />
+    <Content Include="Layouts\PolicyControllerLibrary\bin\cetransport.dll" />
+    <Content Include="Layouts\searchresulttrimming.aspx" />
+    <Content Include="Layouts\SharePoint Enforcer\app-icon.ico" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\boost_date_time-vc140-mt-x64-1_67.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\CE_Log_Interface.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\CE_SPAdmin.exe" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\IrmSettingTool.exe" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\jsoncpp.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\LIBEAY32.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\NextLabs.Entitlement.Wizard.exe" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\policy_engine.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\SDKWrapper.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\SharepointConfigModifier.exe" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\SSLEAY32.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\bin\TagDocProtector.dll" />
+    <Content Include="Layouts\SharePoint Enforcer\config\Configuration.xml" />
+    <Content Include="Layouts\SharePoint Enforcer\config\WebServiceConfig.xml" />
+    <Content Include="Layouts\SharePoint Enforcer\config\XHeaderConfig.xml" />
+    <Content Include="Layouts\SharePoint Enforcer\Logs\ReadMe.txt" />
+    <Content Include="Layouts\SharePoint Enforcer\nxlspelogo.ico" />
+    <Content Include="Layouts\SharePoint Enforcer\ReadMe.txt" />
+    <Content Include="Layouts\SPListTrimming.aspx" />
+    <Content Include="Layouts\StatusReport.aspx" />
+    <Content Include="Layouts\viewlsts.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\SPSecurityTrimming.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources1\SPSecurityTrimming.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PreBuildEvent>call "$(NLBUILDROOT)/prod/Common/Managed/SPEDeployPreBuild.bat" "DLL" "$(Configuration)" "$(ProjectDir)$(OutDir)" "$(ConfigurationName)" "$(ProjectDir)"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>call "$(NLBUILDROOT)/prod/Common/Managed/SPECSharpPostEvent.bat" "DLL" "$(Configuration)" "$(ProjectDir)$(OutDir)" 0 0 1
+
+set PackageCustomTempDir=$(ProjectDir)PackageCustomTemp\
+echo Copy files for package, package temp folder: %25PackageCustomTempDir%25
+if not exist %25PackageCustomTempDir%25 ( 
+    mkdir "%25PackageCustomTempDir%25" 
+) else (
+    del /f /s /q "%25PackageCustomTempDir%25"    
+)
+
+echo copy /y "$(ProjectDir)$(OutDir)/*.dll" " %25PackageCustomTempDir%25"
+copy /y "$(ProjectDir)$(OutDir)/*.dll"  "%25PackageCustomTempDir%25"
+
+set CurErrorLevel=%25ErrorLevel%25
+
+echo Copy wsp package, infact the wsp package created after compile post event, jenkins build it is copy in makefile after build success
+set ProjectReleaseOrDebug=Release
+echo $(Configuration) | findstr /i "Debug" &gt; nul &amp;&amp; set ProjectReleaseOrDebug=Debug
+echo copy /y -f "$(ProjectDir)$(OutDir)/*.wsp" "$(BUILDOUTPUTDIR)/%25ProjectReleaseOrDebug%25_dotnet/$(Configuration)"
+copy /y -f "$(ProjectDir)$(OutDir)/*.wsp" "$(BUILDOUTPUTDIR)/%25ProjectReleaseOrDebug%25_dotnet/$(Configuration)"
+
+rem ignore wsp package copy errors
+set ErrorLevel=%25CurErrorLevel%25</PostBuildEvent>
+  </PropertyGroup>
+</Project>

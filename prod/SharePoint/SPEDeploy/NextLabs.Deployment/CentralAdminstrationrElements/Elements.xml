@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomActionGroup
+    Id="CA_Nextlabs"
+    Location="Microsoft.SharePoint.Administration.Default"
+    Sequence="100"
+    Title="Nextlabs Entitlement Manager"
+    Description="Nextlabs Entitlement Manager Home Page."
+    ImageUrl="/_layouts/15/images/nxlspelogo.jpg">
+    <UrlAction Url="/default.aspx"/>
+  </CustomActionGroup>
+
+  <CustomAction
+    Id="CA_Nextlabs_SearchResultTrimming"
+    GroupId="CA_Nextlabs"
+    Location="Microsoft.SharePoint.Administration.Default"
+    Title="Configure search trimming"
+    Description="Search Result Trimming Setting Pages.">
+    <UrlAction Url="~Site/_layouts/searchresulttrimming.aspx"/>
+  </CustomAction>
+
+  <CustomAction
+  Id="CA_Nextlabs_StatusReport"
+  GroupId="CA_Nextlabs"
+  Location="Microsoft.SharePoint.Administration.Default"
+  Title="View status"
+  Description="View status.">
+    <UrlAction Url="~Site/_layouts/StatusReport.aspx"/>
+  </CustomAction>
+
+  <CustomAction
+  Id="CA_Nextlabs_Feature"
+  GroupId="CA_Nextlabs"
+  Location="Microsoft.SharePoint.Administration.Default"
+  Sequence="1000"
+  Title="Enable or disable policy enforcement"
+  Description="Administration of Nextlabs Entitlement">
+  <UrlAction Url="~Site/_layouts/FeatureManager/FeatureController.aspx"/>
+  </CustomAction>
+  
+  <CustomAction
+    Id="CentralAdminFeatureManager"
+    GroupId="CA_Nextlabs"
+    Location="Microsoft.SharePoint.Administration.Default"
+    Sequence="1000"
+    Title="Prepare site for export or backup"
+    Description="Administration of Nextlabs Features for Export/Backup">
+    <UrlAction Url="~Site/_layouts/FeatureManager/FeatureManager.aspx"/>
+  </CustomAction>
+
+</Elements>

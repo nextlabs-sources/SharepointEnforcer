@@ -1,0 +1,13 @@
+<Feature Scope="Web" 
+  Title="NextLabs SharePoint Enforcer" 
+  Id="36a298d8-413b-4dee-83cd-6082924e3df8"
+  Creator = "NextLabs Inc."
+  Description = "NextLabs SharePoint Enforcer"
+  Hidden = "TRUE"
+  xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="itemElements.xml"/>
+    <ElementManifest Location="listElements.xml"/>
+    <ElementManifest Location="menus.xml"/>
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="11AC4ED6-4863-449b-88D8-4F9BDC3912D4"
+          Title="SharePoint Security Trimming"
+          Description="SharePoint Security Trimming feature of CompliantEnterprise product"
+          Version="1.0.0.0"
+          Hidden="FALSE"
+          Scope="Farm"
+	  ReceiverClass="Nextlabs.SPSecurityTrimming.FeatureReceiver"
+	  ReceiverAssembly="Nextlabs.SPSecurityTrimming, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7030e9011c5eb860"
+	  DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>
+    <ElementManifest Location="spesitemenus.xml"/>
+  </ElementManifests>
+</Feature>

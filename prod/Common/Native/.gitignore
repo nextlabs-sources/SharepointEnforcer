@@ -1,0 +1,9 @@
+# IDL build out
+PdfEditor/include/PdfEditor.h
+PdfEditor/src/dlldata.c
+PdfEditor/src/PdfEditor_i.c
+PdfEditor/src/PdfEditor_p.c
+TagDocProtector/include/TagDocProtector.h
+TagDocProtector/src/dlldata.c
+TagDocProtector/src/TagDocProtector_i.c
+TagDocProtector/src/TagDocProtector_p.c

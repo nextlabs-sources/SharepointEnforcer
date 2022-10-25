@@ -1,0 +1,1 @@
+Workflow Policy Assistant for Microsoft SharePoint v{MAJOR.VERSION}.{MINOR.VERSION}.{MAINTENANCE.VERSION} ({BUILD})
